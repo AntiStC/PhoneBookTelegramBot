@@ -1,25 +1,25 @@
 package ru.spb.sspk.ssdmd.phonebook.service;
 
-import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 
 import java.util.List;
 
 public interface PersonService {
 
 
-    Person save(Person person);
+    PersonDto save(PersonDto personDto);
 
-    Person update(Person person);
+    PersonDto update(PersonDto personDto);
 
-    List<Person> findAll();
+    List<PersonDto> findAll();
 
-    List<Person> findByDepartment(String department);
+    List<PersonDto> findByDepartment(String department);
 
-    List<Person> findByFirstName(String firstname);
+    List<PersonDto> findByFirstName(String firstname);
 
-    List<Person> findByLastName(String lastname);
+    List<PersonDto> findByLastName(String lastname);
 
-    Person findByPhone(Integer phone);
+    PersonDto findByPhone(Integer phone);
 
-    void deleteById(Long id);
+    String deleteById(Long id);
 }
