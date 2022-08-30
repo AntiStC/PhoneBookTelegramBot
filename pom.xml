@@ -63,7 +63,11 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+        <groupId>org.telegram</groupId>
+        <artifactId>telegrambots-spring-boot-starter</artifactId>
+        <version>6.1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
