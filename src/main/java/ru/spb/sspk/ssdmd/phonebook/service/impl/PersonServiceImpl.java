@@ -1,7 +1,7 @@
 package ru.spb.sspk.ssdmd.phonebook.service.impl;
 
-import lombok.Data;
 import org.jvnet.hk2.annotations.Service;
+import org.springframework.stereotype.Component;
 import ru.spb.sspk.ssdmd.phonebook.exception.EntityException;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
@@ -13,10 +13,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@Data
+@Component
 public class PersonServiceImpl implements PersonService {
 
     private final PersonRepository personRepository;
+
+    public PersonServiceImpl(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     public List<Person> getAll() {
         return personRepository.findAll();

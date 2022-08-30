@@ -2,6 +2,7 @@ server:
   servlet:
     context-path: /api
 
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -13,6 +14,7 @@ spring:
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate.globally_quoted_identifiers: true
 
-bot:
-  name: sspk_ssdmd_PB_bot
-    token: 5480993468:AAElm4mrYlSB2gG20mPBAvFu0OXb3nudG9w
+
+telegram:
+  name:sspk_ssdmd_PB_bot
+    token:5480993468:AAElm4mrYlSB2gG20mPBAvFu0OXb3nudG9w
