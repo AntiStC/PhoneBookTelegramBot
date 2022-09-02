@@ -16,5 +16,5 @@ spring:
 
 
 telegram:
-  name:sspk_ssdmd_PB_bot
-    token:5480993468:AAElm4mrYlSB2gG20mPBAvFu0OXb3nudG9w
+  name: sspk_ssdmd_PB_bot
+  token: 5480993468:AAElm4mrYlSB2gG20mPBAvFu0OXb3nudG9w

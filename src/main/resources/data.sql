@@ -1,25 +1,9 @@
-delete
-from person;
+-- delete
+-- from person;
 
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Сергей', 'Валерьевич', 'Дьяков ', 414);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Ольга', 'Юрьевна', 'Никитина', 405);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
-insert into person(first_name, middle_name, last_name, phone)
-values ('Михаил', 'Геннадьевич', 'Борисов', 404);
+insert into person(id, first_name, middle_name, last_name, department, phone)
+values (1, 'Михаил', 'Геннадьевич', 'Борисов', 'администрация', 404);
+insert into person(id, first_name, middle_name, last_name, department, phone)
+values (2, 'Сергей', 'Валерьевич', 'Дьяков ', 'администрация', 414);
+insert into person(id, first_name, middle_name, last_name, department, phone)
+values (3,'Ольга', 'Юрьевна', 'Никитина','бухгалтерия', 405);

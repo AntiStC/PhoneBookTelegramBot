@@ -26,6 +26,14 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.findAll();
     }
 
+
+    @Override
+    public List<PersonDto> findPerson(String answer) {
+
+
+        return null;
+    }
+
     @Override
     public PersonDto save(PersonDto personDto) {
 
@@ -51,9 +59,9 @@ public class PersonServiceImpl implements PersonService {
 
         List<PersonDto> personList = null;
 
-            personList = personRepository.findAll().stream()
-                    .map(PersonMapper::toDto)
-                    .collect(Collectors.toList());
+        personList = personRepository.findAll().stream()
+                .map(PersonMapper::toDto)
+                .collect(Collectors.toList());
 
         return personList;
     }
@@ -98,8 +106,8 @@ public class PersonServiceImpl implements PersonService {
     public PersonDto findByPhone(Integer phone) {
 
 
-            PersonDto person = PersonMapper.toDto(personRepository.findByPhone(phone).orElseThrow(() ->
-                    new EntityException("Not found :(")));
+        PersonDto person = PersonMapper.toDto(personRepository.findByPhone(phone).orElseThrow(() ->
+                new EntityException("Not found :(")));
 
         return person;
     }
