@@ -67,49 +67,15 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public List<PersonDto> findByDepartment(String department) {
+    public List<PersonDto> findByAll(String answer) {
 
         List<PersonDto> personList = null;
 
-        personList = personRepository.findByDepartment(department).stream()
+        personList = personRepository.findByAll(answer).stream()
                 .map(PersonMapper::toDto)
                 .collect(Collectors.toList());
 
         return personList;
-    }
-
-    @Override
-    public List<PersonDto> findByFirstName(String firstname) {
-
-        List<PersonDto> personList = null;
-
-        personList = personRepository.findByFirstName(firstname).stream()
-                .map(PersonMapper::toDto)
-                .collect(Collectors.toList());
-
-        return personList;
-    }
-
-    @Override
-    public List<PersonDto> findByLastName(String lastname) {
-
-        List<PersonDto> personList = null;
-
-        personList = personRepository.findByLastName(lastname).stream()
-                .map(PersonMapper::toDto)
-                .collect(Collectors.toList());
-
-        return personList;
-    }
-
-    @Override
-    public PersonDto findByPhone(Integer phone) {
-
-
-        PersonDto person = PersonMapper.toDto(personRepository.findByPhone(phone).orElseThrow(() ->
-                new EntityException("Not found :(")));
-
-        return person;
     }
 
     @Override

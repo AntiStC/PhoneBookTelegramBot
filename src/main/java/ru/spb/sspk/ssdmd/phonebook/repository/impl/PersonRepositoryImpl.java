@@ -1,13 +1,18 @@
 package ru.spb.sspk.ssdmd.phonebook.repository.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 
+import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Repository
@@ -71,55 +76,21 @@ public class PersonRepositoryImpl implements PersonRepository {
     }
 
     @Override
-    public List<Person> findByDepartment(String department) {
+    public List<Person> findByAll(String answer) {
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate =
+                new NamedParameterJdbcTemplate(jdbcTemplate.getDataSource());
 
-        return jdbcTemplate.query(
-                "select id, last_name, middle_name, last_name, department, phone " +
-                        "from person where department = ?",
-                this::mapRowToPerson, department);
+        Map<String,Object> paramMap = new HashMap<>(16);
+        paramMap.put("answer", answer);
+
+        return namedParameterJdbcTemplate.query("select id, last_name, middle_name, last_name, department, phone " +
+                "from person where first_name = :answer " +
+                "or last_name = :answer " +
+                "or department = :answer"
+                , paramMap, this::mapRowToPerson);
+
     }
 
-    @Override
-    public List<Person> findByFirstName(String firstname) {
-
-        return jdbcTemplate.query(
-                "select id, last_name, middle_name, last_name, department, phone " +
-                        "from person where first_name = ?",
-                this::mapRowToPerson, firstname);
-    }
-
-    @Override
-    public List<Person> findByLastName(String lastname) {
-
-        return jdbcTemplate.query(
-                "select " +
-                        "id, " +
-                        "last_name, " +
-                        "middle_name, " +
-                        "last_name, " +
-                        "department, " +
-                        "phone " +
-                        "from person where last_name = ?",
-                this::mapRowToPerson, lastname);
-    }
-
-    @Override
-    public Optional<Person> findByPhone(Integer phone) {
-
-        List<Person> results = jdbcTemplate.query(
-                "select " +
-                        "id, " +
-                        "last_name, " +
-                        "middle_name, " +
-                        "last_name, " +
-                        "department, " +
-                        "phone " +
-                        "from person where phone = ?",
-                this::mapRowToPerson, phone);
-
-        return results.size() == 0 ?
-                Optional.empty() : Optional.of(results.get(0));
-    }
 
     @Override
     public void deleteById(Long id) {
@@ -130,12 +101,12 @@ public class PersonRepositoryImpl implements PersonRepository {
     private Person mapRowToPerson(ResultSet row, int rowNum) throws SQLException {
 
         return new Person.Builder().
-                setId(row.getLong(1)).
-                setFirstName(row.getString(2)).
-                setMiddleName(row.getString(3)).
-                setLastName(row.getString(4)).
-                setDepartment(row.getString(5)).
-                setPhone(row.getInt(6)).
+                setId(row.getLong("id")).
+                setFirstName(row.getString("first_name")).
+                setMiddleName(row.getString("middle_name")).
+                setLastName(row.getString("last_name")).
+                setDepartment(row.getString("department")).
+                setPhone(row.getInt("phone")).
                 build();
     }
 }

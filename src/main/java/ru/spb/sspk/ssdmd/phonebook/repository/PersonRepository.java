@@ -14,13 +14,7 @@ public interface PersonRepository {
 
     List<Person> findAll();
 
-    List<Person> findByDepartment(String department);
-
-    List<Person> findByFirstName(String firstname);
-
-    List<Person> findByLastName(String lastname);
-
-    Optional<Person> findByPhone(Integer phone);
+    List<Person> findByAll(String answer);
 
     void deleteById(Long id);
 }

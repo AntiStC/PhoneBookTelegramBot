@@ -16,13 +16,7 @@ public interface PersonService {
 
     List<PersonDto> findAll();
 
-    List<PersonDto> findByDepartment(String department);
-
-    List<PersonDto> findByFirstName(String firstname);
-
-    List<PersonDto> findByLastName(String lastname);
-
-    PersonDto findByPhone(Integer phone);
+    List<PersonDto> findByAll(String answer);
 
     String deleteById(Long id);
 }
