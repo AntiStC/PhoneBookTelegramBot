@@ -67,7 +67,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public List<PersonDto> findByAll(String answer) {
+    public String findByAll(String answer) {
 
         List<PersonDto> personList = null;
 
@@ -75,7 +75,9 @@ public class PersonServiceImpl implements PersonService {
                 .map(PersonMapper::toDto)
                 .collect(Collectors.toList());
 
-        return personList;
+        return personList.toString().replace("[", "")
+                .replace("]", "")
+                .replace(",", ",\n\n");
     }
 
     @Override

@@ -88,7 +88,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private SendMessage handleStandardCommand(String answer) {
         SendMessage message = new SendMessage();
-        message.setText(String.valueOf(personService.findByAll(answer)));
+        message.setText(personService.findByAll(answer));
         message.setReplyMarkup(getKeyBoard());
         return message;
     }

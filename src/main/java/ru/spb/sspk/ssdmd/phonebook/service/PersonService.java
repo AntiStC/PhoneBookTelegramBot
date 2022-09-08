@@ -16,7 +16,7 @@ public interface PersonService {
 
     List<PersonDto> findAll();
 
-    List<PersonDto> findByAll(String answer);
+    String findByAll(String answer);
 
     String deleteById(Long id);
 }

@@ -1,19 +1,17 @@
 package ru.spb.sspk.ssdmd.phonebook.repository.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 public class PersonRepositoryImpl implements PersonRepository {
@@ -80,14 +78,18 @@ public class PersonRepositoryImpl implements PersonRepository {
         NamedParameterJdbcTemplate namedParameterJdbcTemplate =
                 new NamedParameterJdbcTemplate(jdbcTemplate.getDataSource());
 
-        Map<String,Object> paramMap = new HashMap<>(16);
-        paramMap.put("answer", answer);
+        Map<String, Object> paramMap = new HashMap<>(16);
+        paramMap.put("first_name", answer);
+        paramMap.put("last_name", answer);
+        paramMap.put("department", answer);
 
-        return namedParameterJdbcTemplate.query("select id, last_name, middle_name, last_name, department, phone " +
-                "from person where first_name = :answer " +
-                "or last_name = :answer " +
-                "or department = :answer"
-                , paramMap, this::mapRowToPerson);
+        List<Person> personList = namedParameterJdbcTemplate.query("select id, first_name, middle_name, last_name, department, phone " +
+                        "from person where first_name = :first_name " +
+                        "or last_name = :last_name " +
+                        "or department = :department"
+                , paramMap, this::mapRowToPerson).stream().collect(Collectors.toList());
+
+        return personList;
 
     }
 
@@ -101,12 +103,13 @@ public class PersonRepositoryImpl implements PersonRepository {
     private Person mapRowToPerson(ResultSet row, int rowNum) throws SQLException {
 
         return new Person.Builder().
-                setId(row.getLong("id")).
-                setFirstName(row.getString("first_name")).
-                setMiddleName(row.getString("middle_name")).
-                setLastName(row.getString("last_name")).
-                setDepartment(row.getString("department")).
-                setPhone(row.getInt("phone")).
+                setId(row.getLong(1)).
+                setFirstName(row.getString(2)).
+                setMiddleName(row.getString(3)).
+                setLastName(row.getString(4)).
+                setDepartment(row.getString(5)).
+                setPhone(row.getInt(6)).
                 build();
+
     }
 }
