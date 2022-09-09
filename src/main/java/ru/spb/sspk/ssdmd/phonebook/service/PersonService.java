@@ -8,15 +8,14 @@ import java.util.List;
 @Service
 public interface PersonService {
 
-    List<PersonDto> findPerson(String answer);
+    PersonDto save(String answer);
 
-    PersonDto save(PersonDto personDto);
-
-    PersonDto update(PersonDto personDto);
+    PersonDto update(String answer);
 
     List<PersonDto> findAll();
 
     String findByAll(String answer);
 
     String deleteById(Long id);
+
 }

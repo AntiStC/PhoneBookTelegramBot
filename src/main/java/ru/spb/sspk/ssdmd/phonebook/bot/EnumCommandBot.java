@@ -14,7 +14,9 @@ public enum EnumCommandBot {
 
     DELETE("/delete"),
 
-    DROP("/drop");
+    DROP("/drop"),
+
+    NOTFOUND("/notFound");
 
     private String command;
 

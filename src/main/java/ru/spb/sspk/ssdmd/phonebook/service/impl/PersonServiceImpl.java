@@ -26,30 +26,19 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.findAll();
     }
 
-
     @Override
-    public List<PersonDto> findPerson(String answer) {
-
-
-        return null;
-    }
-
-    @Override
-    public PersonDto save(PersonDto personDto) {
+    public PersonDto save(String answer) {
 
         PersonDto person = null;
-
-        person = PersonMapper.toDto(personRepository.save(PersonMapper.toEntity(personDto)));
 
         return person;
     }
 
     @Override
-    public PersonDto update(PersonDto personDto) {
+    public PersonDto update(String answer) {
 
         PersonDto person = null;
 
-        person = PersonMapper.toDto(personRepository.update(PersonMapper.toEntity(personDto)));
 
         return person;
     }
@@ -87,4 +76,5 @@ public class PersonServiceImpl implements PersonService {
 
         return "managed to complete";
     }
+
 }
