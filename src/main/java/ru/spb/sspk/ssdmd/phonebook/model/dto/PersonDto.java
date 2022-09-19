@@ -8,6 +8,7 @@ public class PersonDto {
     private String lastName;
     private String department;
     private Integer phone;
+    private Long mobilPhone;
 
     public PersonDto() {
     }
@@ -19,6 +20,7 @@ public class PersonDto {
         private String lastName;
         private String department;
         private Integer phone;
+        private Long mobilPhone;
 
         public Builder setId(Long id) {
             this.id = id;
@@ -50,6 +52,11 @@ public class PersonDto {
             return this;
         }
 
+        public Builder setMobilPhone(Long mobilPhone){
+            this.mobilPhone=mobilPhone;
+            return this;
+        }
+
         public PersonDto build(){
             return new PersonDto(this);
         }
@@ -62,6 +69,7 @@ public class PersonDto {
         this.lastName = builder.lastName;
         this.department = builder.department;
         this.phone = builder.phone;
+        this.mobilPhone = builder.mobilPhone;
     }
 
     public Long getId() {
@@ -112,12 +120,21 @@ public class PersonDto {
         this.phone = phone;
     }
 
+    public Long getMobilPhone() {
+        return mobilPhone;
+    }
+
+    public void setMobilPhone(Long mobilPhone) {
+        this.mobilPhone = mobilPhone;
+    }
+
     @Override
     public String toString() {
-        return firstName + " \n" +
-                middleName + " \n" +
-                lastName + " \n" +
+        return firstName + " " +
+                middleName + " " +
+                lastName + " " +
                 department + " \n" +
-                "#" + phone;
+                "#" + phone + "\n" +
+                mobilPhone;
     }
 }
