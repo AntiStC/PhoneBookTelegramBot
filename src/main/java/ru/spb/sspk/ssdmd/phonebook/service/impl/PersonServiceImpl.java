@@ -1,10 +1,10 @@
 package ru.spb.sspk.ssdmd.phonebook.service.impl;
 
 import org.jvnet.hk2.annotations.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
-import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonListMapper;
 import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonMapper;
 import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
@@ -16,13 +16,7 @@ import java.util.stream.Collectors;
 @Component
 public class PersonServiceImpl implements PersonService {
 
-    private final PersonRepository personRepository;
-    private PersonMapper personMapper;
-    private PersonListMapper personListMapper;
-
-    public PersonServiceImpl(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
+    private PersonRepository personRepository;
 
     public List<Person> getAll() {
         return personRepository.findAll();
@@ -62,7 +56,7 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDto> personList = null;
 
         personList = personRepository.findAll().stream()
-                .map(personMapper::toDto)
+                .map(PersonMapper::toDto)
                 .collect(Collectors.toList());
 
         return personList;
@@ -74,7 +68,7 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDto> personList = null;
 
         personList = personRepository.findByAll(answer).stream()
-                .map(personMapper::toDto)
+                .map(PersonMapper::toDto)
                 .collect(Collectors.toList());
 
         return personList.toString().replace("[", "")

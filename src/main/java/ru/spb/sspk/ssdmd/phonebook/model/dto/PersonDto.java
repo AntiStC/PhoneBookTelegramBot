@@ -1,5 +1,8 @@
 package ru.spb.sspk.ssdmd.phonebook.model.dto;
 
+import lombok.Data;
+
+@Data
 public class PersonDto {
 
     private Long id;
@@ -13,7 +16,7 @@ public class PersonDto {
     public PersonDto() {
     }
 
-    public static class Builder{
+    public static class Builder {
         private Long id;
         private String firstName;
         private String middleName;
@@ -52,12 +55,12 @@ public class PersonDto {
             return this;
         }
 
-        public Builder setMobilPhone(Long mobilPhone){
-            this.mobilPhone=mobilPhone;
+        public Builder setMobilPhone(Long mobilPhone) {
+            this.mobilPhone = mobilPhone;
             return this;
         }
 
-        public PersonDto build(){
+        public PersonDto build() {
             return new PersonDto(this);
         }
     }

@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@Data
 @Entity
 @Table(name = "person", catalog = "public", schema = "sspk_ssdmd_pb")
 public class Person {
@@ -154,7 +155,6 @@ public class Person {
     public void setMobilPhone(Long mobilPhone) {
         this.mobilPhone = mobilPhone;
     }
-
 
 
     @Override
