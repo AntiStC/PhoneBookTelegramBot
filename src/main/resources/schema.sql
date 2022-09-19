@@ -5,5 +5,6 @@ create table if not exists person
     middle_name varchar(20) not null,
     last_name   varchar(20) not null,
     department  varchar     not null,
-    phone       int         not null
+    phone       int         not null,
+    mobil_phone bigint      not null
 );

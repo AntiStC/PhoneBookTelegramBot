@@ -18,4 +18,6 @@ public interface PersonService {
 
     String deleteById(Long id);
 
+    public List<PersonDto> findPerson(String answer);
+
 }

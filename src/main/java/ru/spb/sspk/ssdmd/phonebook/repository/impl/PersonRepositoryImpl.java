@@ -51,7 +51,8 @@ public class PersonRepositoryImpl implements PersonRepository {
                         "middle_name = (?), " +
                         "last_name = (?), " +
                         "department = (?), " +
-                        "phone = (?) " +
+                        "phone = (?), " +
+                        "mobil_phone = (?) " +
                         "where id = (?) " +
                         "returning id",
                 person.getId(),
@@ -59,7 +60,8 @@ public class PersonRepositoryImpl implements PersonRepository {
                 person.getMiddleName(),
                 person.getLastName(),
                 person.getDepartment(),
-                person.getPhone());
+                person.getPhone(),
+                person.getMobilPhone());
 
         return person;
     }
@@ -68,7 +70,7 @@ public class PersonRepositoryImpl implements PersonRepository {
     public List<Person> findAll() {
 
         return jdbcTemplate.query(
-                "select id, first_name, middle_name, last_name, department, phone " +
+                "select id, first_name, middle_name, last_name, department, phone, mobil_phone " +
                         "from person",
                 this::mapRowToPerson);
     }
@@ -83,7 +85,7 @@ public class PersonRepositoryImpl implements PersonRepository {
         paramMap.put("last_name", answer);
         paramMap.put("department", answer);
 
-        List<Person> personList = namedParameterJdbcTemplate.query("select id, first_name, middle_name, last_name, department, phone " +
+        List<Person> personList = namedParameterJdbcTemplate.query("select id, first_name, middle_name, last_name, department, phone, mobil_phone " +
                         "from person where first_name = :first_name " +
                         "or last_name = :last_name " +
                         "or department = :department"
@@ -109,6 +111,7 @@ public class PersonRepositoryImpl implements PersonRepository {
                 setLastName(row.getString(4)).
                 setDepartment(row.getString(5)).
                 setPhone(row.getInt(6)).
+                setMobilPhone(row.getLong(7)).
                 build();
 
     }

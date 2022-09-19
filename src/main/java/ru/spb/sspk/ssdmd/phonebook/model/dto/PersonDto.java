@@ -130,11 +130,11 @@ public class PersonDto {
 
     @Override
     public String toString() {
-        return firstName + " " +
+        return lastName + " " +
+                firstName + " " +
                 middleName + " " +
-                lastName + " " +
                 department + " \n" +
                 "#" + phone + "\n" +
-                mobilPhone;
+                "+7" + mobilPhone;
     }
 }

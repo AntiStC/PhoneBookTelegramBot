@@ -37,21 +37,21 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public PersonDto save(PersonDto personDto) {
+    public PersonDto save(String answer) {
 
         PersonDto person = null;
 
-        person = personMapper.toDto(personRepository.save(personMapper.toEntity(personDto)));
+//        person = personMapper.toDto(personRepository.save(personMapper.toEntity(personDto)));
 
         return person;
     }
 
     @Override
-    public PersonDto update(PersonDto personDto) {
+    public PersonDto update(String answer) {
 
         PersonDto person = null;
 
-        person = personMapper.toDto(personRepository.update(personMapper.toEntity(personDto)));
+//        person = personMapper.toDto(personRepository.update(personMapper.toEntity(personDto)));
 
         return person;
     }
