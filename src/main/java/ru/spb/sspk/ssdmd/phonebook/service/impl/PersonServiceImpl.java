@@ -2,9 +2,9 @@ package ru.spb.sspk.ssdmd.phonebook.service.impl;
 
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.stereotype.Component;
-import ru.spb.sspk.ssdmd.phonebook.exception.EntityException;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonListMapper;
 import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonMapper;
 import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
@@ -17,6 +17,8 @@ import java.util.stream.Collectors;
 public class PersonServiceImpl implements PersonService {
 
     private final PersonRepository personRepository;
+    private PersonMapper personMapper;
+    private PersonListMapper personListMapper;
 
     public PersonServiceImpl(PersonRepository personRepository) {
         this.personRepository = personRepository;
@@ -26,19 +28,30 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.findAll();
     }
 
+
     @Override
-    public PersonDto save(String answer) {
+    public List<PersonDto> findPerson(String answer) {
+
+
+        return null;
+    }
+
+    @Override
+    public PersonDto save(PersonDto personDto) {
 
         PersonDto person = null;
+
+        person = personMapper.toDto(personRepository.save(personMapper.toEntity(personDto)));
 
         return person;
     }
 
     @Override
-    public PersonDto update(String answer) {
+    public PersonDto update(PersonDto personDto) {
 
         PersonDto person = null;
 
+        person = personMapper.toDto(personRepository.update(personMapper.toEntity(personDto)));
 
         return person;
     }
@@ -49,7 +62,7 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDto> personList = null;
 
         personList = personRepository.findAll().stream()
-                .map(PersonMapper::toDto)
+                .map(personMapper::toDto)
                 .collect(Collectors.toList());
 
         return personList;
@@ -61,7 +74,7 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDto> personList = null;
 
         personList = personRepository.findByAll(answer).stream()
-                .map(PersonMapper::toDto)
+                .map(personMapper::toDto)
                 .collect(Collectors.toList());
 
         return personList.toString().replace("[", "")
@@ -76,5 +89,4 @@ public class PersonServiceImpl implements PersonService {
 
         return "managed to complete";
     }
-
 }

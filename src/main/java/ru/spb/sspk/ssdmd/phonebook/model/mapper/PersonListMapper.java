@@ -4,14 +4,12 @@ import org.mapstruct.Mapper;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-@Mapper(componentModel = "spring")
-public interface PersonMapper {
+@Mapper(componentModel = "spring", uses = PersonMapper.class)
+public interface PersonListMapper {
 
-    PersonDto toDto(Person person);
+    List<Person> toEntityList(List<PersonDto> personDtoList);
 
-    Person toEntity(PersonDto personDto);
+    List<PersonDto> toDtoList(List<Person> personList);
 }

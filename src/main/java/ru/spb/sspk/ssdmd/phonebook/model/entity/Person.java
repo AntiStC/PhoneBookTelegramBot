@@ -6,7 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "person",catalog = "public",schema = "sspk_ssdmd_pb")
+@Table(name = "person", catalog = "public", schema = "sspk_ssdmd_pb")
 public class Person {
 
     @Id
@@ -33,15 +33,21 @@ public class Person {
     @Column(name = "phone")
     private Integer phone;
 
+    @NotNull
+    @Column(name = "mobil_phone")
+    private Long mobilPhone;
+
     public Person() {
     }
-    public static class Builder{
+
+    public static class Builder {
         private Long id;
         private String firstName;
         private String middleName;
         private String lastName;
         private String department;
         private Integer phone;
+        private Long mobilPhone;
 
         public Builder setId(Long id) {
             this.id = id;
@@ -73,7 +79,12 @@ public class Person {
             return this;
         }
 
-        public Person build(){
+        public Builder setMobilPhone(Long mobilPhone) {
+            this.mobilPhone = mobilPhone;
+            return this;
+        }
+
+        public Person build() {
             return new Person(this);
         }
     }
@@ -85,6 +96,7 @@ public class Person {
         this.lastName = builder.lastName;
         this.department = builder.department;
         this.phone = builder.phone;
+        this.mobilPhone = builder.mobilPhone;
     }
 
     public Long getId() {
@@ -135,6 +147,14 @@ public class Person {
         this.department = department;
     }
 
+    public Long getMobilPhone() {
+        return mobilPhone;
+    }
+
+    public void setMobilPhone(Long mobilPhone) {
+        this.mobilPhone = mobilPhone;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -146,7 +166,8 @@ public class Person {
         if (!middleName.equals(person.middleName)) return false;
         if (!lastName.equals(person.lastName)) return false;
         if (!department.equals(person.department)) return false;
-        return phone.equals(person.phone);
+        if (!phone.equals(person.phone)) return false;
+        return mobilPhone.equals(person.mobilPhone);
     }
 
     @Override
@@ -156,6 +177,7 @@ public class Person {
         result = 31 * result + lastName.hashCode();
         result = 31 * result + department.hashCode();
         result = 31 * result + phone.hashCode();
+        result = 31 * result + mobilPhone.hashCode();
         return result;
     }
 
