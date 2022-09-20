@@ -159,10 +159,10 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
     private SendMessage handleUpdateCommand(String answer) {
-        SendMessage messageStandart = new SendMessage();
-        messageStandart.setText(personService.findByAll(answer));
-        messageStandart.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
-        return messageStandart;
+        SendMessage messageFind= new SendMessage();
+        messageFind.setText(personService.findByAll(answer));
+        messageFind.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
+        return messageFind;
     }
 
     private SendMessage handleStartCommand(String answer) {

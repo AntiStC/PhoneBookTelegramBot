@@ -135,7 +135,7 @@ public class PersonDto {
     public String toString() {
         return lastName + " " +
                 firstName + " " +
-                middleName + " " +
+                middleName + " - " +
                 department + " \n" +
                 "#" + phone + "\n" +
                 "+7" + mobilPhone;

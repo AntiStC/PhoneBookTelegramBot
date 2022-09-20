@@ -38,7 +38,8 @@ public class PersonRepositoryImpl implements PersonRepository {
                 person.getMiddleName(),
                 person.getLastName(),
                 person.getDepartment(),
-                person.getPhone());
+                person.getPhone(),
+                person.getMobilPhone());
 
         return person;
     }

@@ -1,7 +1,6 @@
 package ru.spb.sspk.ssdmd.phonebook.service.impl;
 
 import org.jvnet.hk2.annotations.Service;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
@@ -16,7 +15,11 @@ import java.util.stream.Collectors;
 @Component
 public class PersonServiceImpl implements PersonService {
 
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
+
+    public PersonServiceImpl(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     public List<Person> getAll() {
         return personRepository.findAll();
