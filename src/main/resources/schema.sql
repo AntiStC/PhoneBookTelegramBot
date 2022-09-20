@@ -8,3 +8,11 @@ create table if not exists person
     phone       int         not null,
     mobil_phone bigint      not null
 );
+
+create table if not exists user_bot
+(
+    id              bigint unique primary key,
+    user_id         bigint  not null,
+    user_first_name varchar not null,
+    user_last_name  varchar
+);

@@ -41,18 +41,22 @@ public class TelegramBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
             String answer = update.getMessage().getText();
-            long chat_id = update.getMessage().getChatId();
+            Long userId = update.getMessage().getFrom().getId();
+            String userFirstName = update.getMessage().getFrom().getFirstName();
+            String userLastName = update.getMessage().getFrom().getLastName();
+            String userName = update.getMessage().getFrom().getUserName();
+            long chatId = update.getMessage().getChatId();
 
             try {
                 SendMessage message = getCommandResponse(answer);
                 message.enableHtml(true);
                 message.setParseMode(ParseMode.HTML);
-                message.setChatId(chat_id);
+                message.setChatId(chatId);
                 execute(message);
             } catch (TelegramApiException e) {
                 log.error("", e);
                 SendMessage message = handleNotFoundCommand();
-                message.setChatId(chat_id);
+                message.setChatId(chatId);
             }
         } else if (update.hasCallbackQuery()) {
             try {
@@ -99,7 +103,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private SendMessage handleNotFoundCommand() {
         SendMessage message = new SendMessage();
-        message.setText("Начните поиск!\nНо помните про заглавные буквы!");
+        message.setText("Начните поиск!\n");
         return message;
     }
 
@@ -116,20 +120,20 @@ public class TelegramBot extends TelegramLongPollingBot {
                 "Для поиска введите Имя или Фамилию или отдел." +
                 "Но помните ФИО пишется с большой буквы." +
                 "Список отделов для поиска: \n" +
-                "администрация;\n" +
-                "ФБО - финансово-бухгалтерский отдел;\n" +
-                "ОХО - отдел хозяйственного обеспечения;\n" +
-                "ОБПиЗ - отдел бюджетного планирования и закупок;\n" +
-                "ОКОиД - отдел кадрового обеспечения и делопроизводства;\n" +
-                "ОСОПО - отдел сопровождения общего ПО;\n" +
-                "ОПП - отдел поддержки пользователей;\n" +
-                "ОИБ - отдел информационной безопасности;\n" +
-                "ОССПОиБД - отдел сопровождения специального ПО и баз данных;\n" +
-                "ОВД - отдел ведения документации;\n" +
-                "ЮО - юридический отдел;\n" +
-                "ОКЦ - отдел контакт-центра;\n" +
-                "ОТИС - отдел тестирования информационных систем;\n" +
-                "(в следующих версиях будет больше изменений):)");
+                "А - администрация;\n" +
+                "ФБ - финансово-бухгалтерский отдел;\n" +
+                "ХО - отдел хозяйственного обеспечения;\n" +
+                "БП - отдел бюджетного планирования и закупок;\n" +
+                "КО - отдел кадрового обеспечения и делопроизводства;\n" +
+                "ОПО - отдел сопровождения общего ПО;\n" +
+                "ПП - отдел поддержки пользователей;\n" +
+                "ИБ - отдел информационной безопасности;\n" +
+                "СПО - отдел сопровождения специального ПО;\n" +
+                "БД - отдел сопровождения баз данных;\n" +
+                "ВД - отдел ведения документации;\n" +
+                "Ю - юридический отдел;\n" +
+                "КЦ - отдел контакт-центра;\n" +
+                "ТИС - отдел тестирования информационных систем;\n");
         messageInfo.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
 
         return messageInfo;
@@ -170,8 +174,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         messageStart.setText("Добро пожаловать в телефонный справочник ССПК. " +
                 "Поиск выполняется по Фамилии, по Имени, по отделу. " +
                 "Для поиска введите Имя или Фамилию или отдел." +
-                "Но помните ФИО пишется с большой буквы, " +
-                "а отдел с маленькой(в следующих версиях будет больше изменений) :)\n\n" +
+                "\n\n" +
                 "выполните поиск...");
         return messageStart;
     }
