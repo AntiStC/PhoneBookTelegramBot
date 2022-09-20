@@ -2,13 +2,16 @@ package ru.spb.sspk.ssdmd.phonebook.service.impl;
 
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonMapper;
 import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -70,13 +73,26 @@ public class PersonServiceImpl implements PersonService {
 
         List<PersonDto> personList = null;
 
-        personList = personRepository.findByAll(answer).stream()
-                .map(PersonMapper::toDto)
-                .collect(Collectors.toList());
+        if (answer == null || answer.length() == 0) {
+            return "не удалось выполнить запрос";
+        } else {
+            String firstName = StringUtils.capitalize(answer.toLowerCase());
+            String lastName = StringUtils.capitalize(answer.toLowerCase());
+            String department = answer.toUpperCase();
 
-        return personList.toString().replace("[", "")
-                .replace("]", "")
-                .replace(",", ",\n\n");
+            Map<String, Object> paramMap = new HashMap<>(16);
+            paramMap.put("first_name", firstName);
+            paramMap.put("last_name", lastName);
+            paramMap.put("department", department);
+
+            personList = personRepository.findByAll(paramMap).stream()
+                    .map(PersonMapper::toDto)
+                    .collect(Collectors.toList());
+        }
+
+            return personList.toString().replace("[", "")
+                    .replace("]", "")
+                    .replace(",", ",\n\n");
     }
 
     @Override

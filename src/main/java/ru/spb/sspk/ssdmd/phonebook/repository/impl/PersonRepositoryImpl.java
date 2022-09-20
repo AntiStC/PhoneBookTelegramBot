@@ -77,14 +77,11 @@ public class PersonRepositoryImpl implements PersonRepository {
     }
 
     @Override
-    public List<Person> findByAll(String answer) {
+    public List<Person> findByAll(Map<String, Object> paramMap) {
         NamedParameterJdbcTemplate namedParameterJdbcTemplate =
                 new NamedParameterJdbcTemplate(jdbcTemplate.getDataSource());
 
-        Map<String, Object> paramMap = new HashMap<>(16);
-        paramMap.put("first_name", answer);
-        paramMap.put("last_name", answer);
-        paramMap.put("department", answer);
+
 
         List<Person> personList = namedParameterJdbcTemplate.query("select id, first_name, middle_name, last_name, department, phone, mobil_phone " +
                         "from person where first_name = :first_name " +

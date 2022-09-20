@@ -3,7 +3,7 @@ package ru.spb.sspk.ssdmd.phonebook.repository;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
 public interface PersonRepository {
 
@@ -14,7 +14,7 @@ public interface PersonRepository {
 
     List<Person> findAll();
 
-    List<Person> findByAll(String answer);
+    List<Person> findByAll(Map<String, Object> paramMap);
 
     void deleteById(Long id);
 }
