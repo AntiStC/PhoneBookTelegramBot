@@ -56,9 +56,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 //            } else {
             try {
                 SendMessage message = getCommandResponse(
-                        answer,userId,userFirstName, userLastName);
-                message.enableHtml(true);
-                message.setParseMode(ParseMode.HTML);
+                        answer);
                 message.setChatId(chatId);
                 execute(message);
             } catch (TelegramApiException e) {
