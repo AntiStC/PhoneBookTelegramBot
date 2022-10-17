@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook.bot;
+package ru.spb.sspk.ssdmd.phonebook_test.bot;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,8 +8,8 @@ import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
-import ru.spb.sspk.ssdmd.phonebook.service.UserService;
+import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
+import ru.spb.sspk.ssdmd.phonebook_test.service.UserService;
 
 @Component
 @Slf4j
@@ -56,9 +56,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 //            } else {
             try {
                 SendMessage message = getCommandResponse(
-                        answer,userId,userFirstName, userLastName);
-                message.enableHtml(true);
-                message.setParseMode(ParseMode.HTML);
+                        answer);
                 message.setChatId(chatId);
                 execute(message);
             } catch (TelegramApiException e) {

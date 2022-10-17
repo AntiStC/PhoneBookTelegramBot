@@ -1,13 +1,13 @@
-package ru.spb.sspk.ssdmd.phonebook.service.impl;
+package ru.spb.sspk.ssdmd.phonebook_test.service.impl;
 
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
-import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
-import ru.spb.sspk.ssdmd.phonebook.model.mapper.PersonMapper;
-import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
-import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
+import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
+import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper;
+import ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository;
+import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
 
 import java.util.HashMap;
 import java.util.List;

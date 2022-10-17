@@ -1,7 +1,7 @@
-package ru.spb.sspk.ssdmd.phonebook.model.mapper;
+package ru.spb.sspk.ssdmd.phonebook_test.model.mapper;
 
-import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
-import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
+import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
 
 public class PersonMapper {
 

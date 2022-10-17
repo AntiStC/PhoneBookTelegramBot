@@ -1,6 +1,6 @@
-package ru.spb.sspk.ssdmd.phonebook.repository;
+package ru.spb.sspk.ssdmd.phonebook_test.repository;
 
-import ru.spb.sspk.ssdmd.phonebook.model.entity.User;
+import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User;
 
 import java.util.Optional;
 

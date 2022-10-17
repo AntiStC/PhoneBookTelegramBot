@@ -1,25 +1,18 @@
-package ru.spb.sspk.ssdmd.phonebook.model.entity;
+package ru.spb.sspk.ssdmd.phonebook_test.model.dto;
 
-import javax.persistence.*;
+import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User;
+
+import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table(name = "user_bot", catalog = "public", schema = "sspk_ssdmd_pb")
-public class User {
+public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull
-    @Column(name = "user_id")
     private Long userId;
-    @NotNull
-    @Column(name = "user_first_name")
     private String userFirstName;
-    @Column(name = "user_last_name")
     private String userLastName;
 
-    public User() {
+    public UserDto() {
     }
 
     public static class Builder {
@@ -48,12 +41,12 @@ public class User {
             return this;
         }
 
-        public User build(){
-            return new User(this);
+        public UserDto build(){
+            return new UserDto(this);
         }
     }
 
-    public User(Builder builder){
+    public UserDto(Builder builder){
         this.id= builder.id;
         this.userId= builder.userId;
         this.userFirstName= builder.userFirstName;
@@ -93,26 +86,8 @@ public class User {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User)) return false;
-
-        User user = (User) o;
-
-        if (!userId.equals(user.userId)) return false;
-        return userFirstName != null ? userFirstName.equals(user.userFirstName) : user.userFirstName == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = userId.hashCode();
-        result = 31 * result + (userFirstName != null ? userFirstName.hashCode() : 0);
-        return result;
-    }
-
-    @Override
     public String toString() {
-        return "User{" +
+        return "UserDto{" +
                 "id=" + id +
                 ", userId=" + userId +
                 ", userFirstName='" + userFirstName + '\'' +

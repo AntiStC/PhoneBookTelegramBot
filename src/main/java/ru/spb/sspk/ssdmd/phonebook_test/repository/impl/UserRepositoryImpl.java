@@ -1,9 +1,9 @@
-package ru.spb.sspk.ssdmd.phonebook.repository.impl;
+package ru.spb.sspk.ssdmd.phonebook_test.repository.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import ru.spb.sspk.ssdmd.phonebook.model.entity.User;
-import ru.spb.sspk.ssdmd.phonebook.repository.UserRepository;
+import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User;
+import ru.spb.sspk.ssdmd.phonebook_test.repository.UserRepository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

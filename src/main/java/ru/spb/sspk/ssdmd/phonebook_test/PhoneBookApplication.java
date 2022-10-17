@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook;
+package ru.spb.sspk.ssdmd.phonebook_test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
