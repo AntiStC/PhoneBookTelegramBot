@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook.model.dto;
+package ru.spb.sspk.ssdmd.phonebook_test.model.dto;
 
 import lombok.Data;
 

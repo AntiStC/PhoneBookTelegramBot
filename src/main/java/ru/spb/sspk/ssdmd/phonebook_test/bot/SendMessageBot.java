@@ -1,83 +1,17 @@
-package ru.spb.sspk.ssdmd.phonebook.bot;
+package ru.spb.sspk.ssdmd.phonebook_test.bot;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.methods.ParseMode;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
-import ru.spb.sspk.ssdmd.phonebook.service.UserService;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
+import ru.spb.sspk.ssdmd.phonebook_test.service.UserService;
 
-@Component
-@Slf4j
-public class TelegramBot extends TelegramLongPollingBot {
+public class SendMessageBot {
 
-    private final PersonService personService;
-    private final InlineKeyboardMaker inlineKeyboardMaker;
-    private final UserService userService;
+    private PersonService personService;
+    private UserService userService;
+    private InlineKeyboardMaker inlineKeyboardMaker;
 
-    @Value("${telegram.name}")
-    private String botName;
-    @Value("${telegram.token}")
-    private String botToken;
-
-    public TelegramBot(PersonService personService, InlineKeyboardMaker inlineKeyboardMaker, UserService userService) {
-        this.personService = personService;
-        this.inlineKeyboardMaker = inlineKeyboardMaker;
-        this.userService = userService;
-    }
-
-    @Override
-    public String getBotUsername() {
-        return botName;
-    }
-
-    @Override
-    public String getBotToken() {
-        return botToken;
-    }
-
-    @Override
-    public void onUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
-            String answer = update.getMessage().getText();
-            Long userId = update.getMessage().getFrom().getId();
-            String userFirstName = update.getMessage().getFrom().getFirstName();
-            String userLastName = update.getMessage().getFrom().getLastName();
-            Long chatId = update.getMessage().getChatId();
-//            if (!userId.equals(userService.findAll(userId))) {
-//                SendMessage message = handleUserNotFound(userId);
-//                message.setChatId(chatId);
-//            } else if (answer.toUpperCase().equals(responce)) {
-//                userService.save(userId, userFirstName, userLastName);
-//            } else {
-            try {
-                SendMessage message = getCommandResponse(
-                        answer);
-                message.setChatId(chatId);
-                execute(message);
-            } catch (TelegramApiException e) {
-                log.error("", e);
-                SendMessage message = handleNotFoundCommand();
-                message.setChatId(chatId);
-            }
-//                            }
-        } else if (update.hasCallbackQuery()) {
-            try {
-                SendMessage message = getCommandResponse(update.getCallbackQuery().getData());
-                message.setChatId(update.getCallbackQuery().getMessage().getChatId());
-                execute(message);
-            } catch (TelegramApiException e) {
-                log.error("", e);
-            }
-        }
-    }
-
-    private SendMessage getCommandResponse(String answer)
-            throws TelegramApiException{
+    SendMessage getCommandResponse(String answer) throws TelegramApiException {
         if (answer.equals(EnumCommandBot.INFO.getCommand())) {
             return handleInfoCommand(answer);
         }
@@ -105,22 +39,18 @@ public class TelegramBot extends TelegramLongPollingBot {
         return handleStandardCommand(answer);
     }
 
-    private SendMessage getCommandResponse(
-            String answer, Long userId, String userFirstName, String userLastName)
-            throws TelegramApiException {
+    private SendMessage getCommandResponse(String answer, Long userId) throws TelegramApiException {
 
         if (answer.equals(EnumCommandBot.START.getCommand())) {
             return handleStartCommand(answer, userId);
-        }
-        else if  (answer.equals("сспкforever")){
-            return handleUserNotFound(userId, userFirstName, userLastName);
-        }
-        else {
+        } else if (answer.equals("сспкforever")) {
+            return handleUserNotFound(userId);
+        } else {
             return null;
         }
     }
 
-    private SendMessage handleNotFoundCommand() {
+    SendMessage handleNotFoundCommand() {
         SendMessage message = new SendMessage();
         message.setText("Начните поиск!\n");
         return message;
@@ -189,9 +119,9 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
     private SendMessage handleStartCommand(String answer, Long userId) {
-        Long userIdInDB = userService.findAll(userId);
+        String userIdInDB = userService.findAll(userId);
         SendMessage messageStart = new SendMessage();
-        if (userId.equals(userIdInDB)) {
+        if (userId.toString().equals(userIdInDB)) {
             messageStart.setText("Введите кодовую фразу для проверки!");
         } else {
             messageStart.setText("Добро пожаловать в телефонный справочник ССПК. " +
@@ -203,10 +133,9 @@ public class TelegramBot extends TelegramLongPollingBot {
         return messageStart;
     }
 
-    private SendMessage handleUserNotFound(
-            Long userId, String userFirstName, String userLastName) {
+    private SendMessage handleUserNotFound(Long userId) {
         SendMessage messageUserNotFound = new SendMessage();
-        userService.save(userId, userFirstName, userLastName);
+        userService.save(userId);
         messageUserNotFound.setText("Теперь можно пользоваться!");
         messageUserNotFound.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
 

@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook.exception;
+package ru.spb.sspk.ssdmd.phonebook_test.exception;
 
 
 public class EntityException extends RuntimeException {

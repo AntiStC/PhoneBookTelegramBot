@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.spb.sspk.ssdmd</groupId>
-    <artifactId>PhoneBook</artifactId>
+    <artifactId>PhoneBook_test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>PhoneBook</name>
     <description>PhoneBook</description>
@@ -22,6 +22,7 @@
         </developer>
     </developers>
     <properties>
+        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
         <java.version>17</java.version>
     </properties>
     <dependencies>
@@ -60,7 +61,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.2.Final</version>
+            <version>${org.mapstruct.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -68,9 +69,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        <groupId>org.telegram</groupId>
-        <artifactId>telegrambots-spring-boot-starter</artifactId>
-        <version>6.1.0</version>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots-spring-boot-starter</artifactId>
+            <version>6.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.telegram</groupId>
@@ -81,6 +82,12 @@
             <groupId>org.telegram</groupId>
             <artifactId>telegrambotsextensions</artifactId>
             <version>6.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
@@ -101,6 +108,11 @@
                                 <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
                                 <java.source>${maven.compiler.source}</java.source>
                                 <java.target>${maven.compiler.target}</java.target>
+                                <path>
+                                    <groupId>org.mapstruct</groupId>
+                                    <artifactId>mapstruct-processor</artifactId>
+                                    <version>${org.mapstruct.version}</version>
+                                </path>
                             </additionalProperties>
                         </configuration>
                     </execution>
