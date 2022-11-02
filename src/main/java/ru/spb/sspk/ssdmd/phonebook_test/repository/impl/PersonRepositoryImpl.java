@@ -2,6 +2,7 @@ package ru.spb.sspk.ssdmd.phonebook_test.repository.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
 import ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Repository
+@Component
 public class PersonRepositoryImpl implements PersonRepository {
 
     private JdbcTemplate jdbcTemplate;

@@ -73,9 +73,6 @@ public class PersonServiceImpl implements PersonService {
 
         List<PersonDto> personList = null;
 
-        if (answer == null || answer.length() == 0) {
-            return "не удалось выполнить запрос";
-        } else {
             String firstName = StringUtils.capitalize(answer.toLowerCase());
             String lastName = StringUtils.capitalize(answer.toLowerCase());
             String department = answer.toUpperCase();
@@ -88,7 +85,6 @@ public class PersonServiceImpl implements PersonService {
             personList = personRepository.findByAll(paramMap).stream()
                     .map(PersonMapper::toDto)
                     .collect(Collectors.toList());
-        }
 
             return personList.toString().replace("[", "")
                     .replace("]", "")
