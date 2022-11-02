@@ -1,13 +1,10 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-@Data
 @Entity
-@Table(name = "person", catalog = "public", schema = "sspk_ssdmd_pb")
+@Table(name = "person", catalog = "sspk_ssdmd_pb", schema = "public")
 public class Person {
 
     @Id

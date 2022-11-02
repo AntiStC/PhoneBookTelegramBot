@@ -12,36 +12,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-    public UserServiceImpl(UserRepository userRepository) {
+    private final UserMapper userMapper;
+
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper) {
         this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
 
     @Override
     public UserDto save(Long userId) {
 
         UserDto userDto = new UserDto();
-
-        UserMapper.INSTANCE.toDto(userRepository.save(UserMapper.INSTANCE.toEntity(userDto)));
-
-        return null;
+        userDto.setUserId(userId);
+        return userMapper.INSTANCE.toDto(userRepository.save(userMapper.toEntity(userDto)));
     }
 
     @Override
     public String findAll(Long userId) {
 
-        List<UserDto> list = new ArrayList<>();
-        for (User user : userRepository.findByUserId(userId)) {
-            UserDto userDto = UserMapper.INSTANCE.toDto(user);
-            list.add(userDto);
+        UserDto userDto = userMapper.INSTANCE.toDto(userRepository.findByUserId(userId));
+        if (userDto == null) {
+            return null;
+        } else {
+            return userDto.toString();
         }
-
-            return list.toString().replace("[", "")
-                    .replace("]","");
-
     }
 }

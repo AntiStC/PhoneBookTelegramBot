@@ -1,8 +1,5 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.dto;
 
-import lombok.Data;
-
-@Data
 public class PersonDto {
 
     private Long id;
