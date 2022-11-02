@@ -8,5 +8,5 @@ public interface UserService {
 
     UserDto save(Long userId);
 
-    String findAll(Long userId);
+    Long findAll(Long userId);
 }

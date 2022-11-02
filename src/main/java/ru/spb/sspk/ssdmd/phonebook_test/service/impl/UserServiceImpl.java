@@ -32,13 +32,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String findAll(Long userId) {
+    public Long findAll(Long userId) {
 
         UserDto userDto = userMapper.INSTANCE.toDto(userRepository.findByUserId(userId));
         if (userDto == null) {
             return null;
         } else {
-            return userDto.toString();
+            return userDto.getUserId();
         }
     }
 }
