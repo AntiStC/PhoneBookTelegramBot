@@ -1,11 +1,11 @@
-package ru.spb.sspk.ssdmd.phonebook_test.model.mapper;
+package ru.spb.sspk.ssdmd.phonebook.model.mapper;
 
 import org.springframework.stereotype.Component;
-import ru.spb.sspk.ssdmd.phonebook_test.model.dto.UserDto;
-import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User;
+import ru.spb.sspk.ssdmd.phonebook.model.dto.UserDto;
+import ru.spb.sspk.ssdmd.phonebook.model.entity.User;
 
 @Component
-public class UserMapperImpl implements UserMapper{
+public class UserMapperImpl implements UserMapper {
     @Override
     public UserDto toDto(User user) {
         if (user == null) {

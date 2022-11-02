@@ -1,9 +1,9 @@
-package ru.spb.sspk.ssdmd.phonebook_test.bot;
+package ru.spb.sspk.ssdmd.phonebook.bot;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
-import ru.spb.sspk.ssdmd.phonebook_test.service.UserService;
+import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
+import ru.spb.sspk.ssdmd.phonebook.service.UserService;
 
 @Component
 public class SendMessageBot {

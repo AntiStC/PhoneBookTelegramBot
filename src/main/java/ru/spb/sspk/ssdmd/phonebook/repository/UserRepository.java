@@ -1,8 +1,8 @@
-package ru.spb.sspk.ssdmd.phonebook_test.repository;
+package ru.spb.sspk.ssdmd.phonebook.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User;
+import ru.spb.sspk.ssdmd.phonebook.model.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook_test.bot;
+package ru.spb.sspk.ssdmd.phonebook.bot;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,8 +7,8 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
-import ru.spb.sspk.ssdmd.phonebook_test.service.UserService;
+import ru.spb.sspk.ssdmd.phonebook.service.PersonService;
+import ru.spb.sspk.ssdmd.phonebook.service.UserService;
 
 @Component
 @Slf4j

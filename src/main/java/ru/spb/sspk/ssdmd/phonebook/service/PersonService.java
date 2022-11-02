@@ -1,7 +1,7 @@
-package ru.spb.sspk.ssdmd.phonebook_test.service;
+package ru.spb.sspk.ssdmd.phonebook.service;
 
 import org.springframework.stereotype.Service;
-import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
+import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
 
 import java.util.List;
 

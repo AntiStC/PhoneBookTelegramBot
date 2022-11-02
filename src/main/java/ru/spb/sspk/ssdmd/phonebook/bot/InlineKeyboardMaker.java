@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook_test.bot;
+package ru.spb.sspk.ssdmd.phonebook.bot;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;

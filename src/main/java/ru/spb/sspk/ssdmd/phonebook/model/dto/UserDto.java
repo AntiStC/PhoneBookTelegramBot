@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook_test.model.dto;
+package ru.spb.sspk.ssdmd.phonebook.model.dto;
 
 public class UserDto {
     private Long userId;

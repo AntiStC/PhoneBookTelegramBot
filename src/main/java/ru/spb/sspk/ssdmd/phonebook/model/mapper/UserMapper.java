@@ -1,18 +1,16 @@
 package ru.spb.sspk.ssdmd.phonebook.model.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 import ru.spb.sspk.ssdmd.phonebook.model.dto.UserDto;
 import ru.spb.sspk.ssdmd.phonebook.model.entity.User;
 
-import java.util.Optional;
-
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserMapper {
 
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    UserDto toDto(Optional<User> user);
+    UserDto toDto(User user);
 
     User toEntity(UserDto userDto);
-
 }

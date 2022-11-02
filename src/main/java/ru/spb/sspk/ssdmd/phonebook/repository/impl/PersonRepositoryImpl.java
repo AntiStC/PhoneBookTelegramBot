@@ -1,15 +1,13 @@
-package ru.spb.sspk.ssdmd.phonebook_test.repository.impl;
+package ru.spb.sspk.ssdmd.phonebook.repository.impl;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
-import ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository;
+import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook.repository.PersonRepository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

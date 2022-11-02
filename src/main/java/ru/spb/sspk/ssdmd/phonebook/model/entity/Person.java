@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook_test.model.entity;
+package ru.spb.sspk.ssdmd.phonebook.model.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

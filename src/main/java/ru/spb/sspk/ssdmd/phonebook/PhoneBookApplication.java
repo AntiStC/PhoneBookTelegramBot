@@ -1,13 +1,13 @@
-package ru.spb.sspk.ssdmd.phonebook_test;
+package ru.spb.sspk.ssdmd.phonebook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PhoneBookTestApplication {
+public class PhoneBookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhoneBookTestApplication.class, args);
+		SpringApplication.run(PhoneBookApplication.class, args);
 	}
 
 }

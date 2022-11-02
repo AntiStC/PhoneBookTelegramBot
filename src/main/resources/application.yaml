@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /api
-  port: 8081
+  port: 8080
 
 
 spring:
@@ -17,5 +17,5 @@ spring:
 
 
 telegram:
-  name: sspk_ssdmd_test_bot
-  token: 5581826793:AAHgUXlOU2axvMIVz4HyQ8NfHCgx5yoG-z4
+  name: sspk_ssdmd_PB
+  token: 5480993468:AAElm4mrYlSB2gG20mPBAvFu0OXb3nudG9w

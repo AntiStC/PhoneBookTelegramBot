@@ -1,4 +1,4 @@
-package ru.spb.sspk.ssdmd.phonebook_test.bot;
+package ru.spb.sspk.ssdmd.phonebook.bot;
 
 public enum EnumCommandBot {
 

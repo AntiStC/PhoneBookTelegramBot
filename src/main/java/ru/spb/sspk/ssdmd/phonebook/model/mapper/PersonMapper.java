@@ -1,8 +1,8 @@
-package ru.spb.sspk.ssdmd.phonebook_test.model.mapper;
+package ru.spb.sspk.ssdmd.phonebook.model.mapper;
 
 import org.springframework.stereotype.Component;
-import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
-import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
+import ru.spb.sspk.ssdmd.phonebook.model.dto.PersonDto;
+import ru.spb.sspk.ssdmd.phonebook.model.entity.Person;
 
 @Component
 public class PersonMapper {
