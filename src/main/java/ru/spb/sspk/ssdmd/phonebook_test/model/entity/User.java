@@ -1,14 +1,15 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.entity;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_bot", catalog = "public", schema = "sspk_ssdmd_pb")
+@Table(name = "user_bot", catalog = "sspk_ssdmd_pb", schema = "public")
 public class User {
 
     @Id
-    @NotNull
     @Column(name = "user_id")
     private Long userId;
 

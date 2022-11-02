@@ -1,54 +1,23 @@
 package ru.spb.sspk.ssdmd.phonebook_test.bot;
 
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import ru.spb.sspk.ssdmd.phonebook_test.service.PersonService;
 import ru.spb.sspk.ssdmd.phonebook_test.service.UserService;
 
+@Component
 public class SendMessageBot {
 
     private PersonService personService;
-    private UserService userService;
     private InlineKeyboardMaker inlineKeyboardMaker;
+    private UserService userService;
 
-    SendMessage getCommandResponse(String answer) throws TelegramApiException {
-        if (answer.equals(EnumCommandBot.INFO.getCommand())) {
-            return handleInfoCommand(answer);
-        }
-
-        if (answer.equals(EnumCommandBot.FIND.getCommand())) {
-            return handleFindCommand(answer);
-        }
-
-        if (answer.equals(EnumCommandBot.CREATE.getCommand())) {
-            return handleCreateCommand(answer);
-        }
-
-        if (answer.equals(EnumCommandBot.UPDATE.getCommand())) {
-            return handleUpdateCommand(answer);
-        }
-
-        if (answer.equals(EnumCommandBot.DELETE.getCommand())) {
-            return handleDeleteCommand(answer);
-        }
-
-        if (answer.equals(EnumCommandBot.NOTFOUND.getCommand())) {
-            return handleNotFoundCommand();
-        }
-
-        return handleStandardCommand(answer);
+    public SendMessageBot(PersonService personService, InlineKeyboardMaker inlineKeyboardMaker, UserService userService) {
+        this.personService = personService;
+        this.inlineKeyboardMaker = inlineKeyboardMaker;
+        this.userService = userService;
     }
 
-    private SendMessage getCommandResponse(String answer, Long userId) throws TelegramApiException {
-
-        if (answer.equals(EnumCommandBot.START.getCommand())) {
-            return handleStartCommand(answer, userId);
-        } else if (answer.equals("сспкforever")) {
-            return handleUserNotFound(userId);
-        } else {
-            return null;
-        }
-    }
 
     SendMessage handleNotFoundCommand() {
         SendMessage message = new SendMessage();
@@ -56,14 +25,19 @@ public class SendMessageBot {
         return message;
     }
 
-    private SendMessage handleStandardCommand(String answer) {
+    SendMessage handleStandardCommand(String answer, Long userId) {
         SendMessage messageStandart = new SendMessage();
-        messageStandart.setText(personService.findByAll(answer));
-        messageStandart.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
-        return messageStandart;
+        if (userId.equals(userService.findAll(userId))) {
+            messageStandart.setText(personService.findByAll(answer));
+            messageStandart.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
+            return messageStandart;
+        }else {
+            messageStandart.setText("Нет права доступа!");
+            return messageStandart;
+        }
     }
 
-    private SendMessage handleInfoCommand(String answer) {
+    SendMessage handleInfoCommand(String answer) {
         SendMessage messageInfo = new SendMessage();
         messageInfo.setText("Поиск выполняется по Фамилии, по Имени, по отделу. " +
                 "Для поиска введите Имя или Фамилию или отдел." +
@@ -88,7 +62,7 @@ public class SendMessageBot {
         return messageInfo;
     }
 
-    private SendMessage handleCreateCommand(String answer) {
+    SendMessage handleCreateCommand(String answer) {
         SendMessage messageCreate = new SendMessage();
         personService.save(answer);
         messageCreate.setText("контакт успешно создан");
@@ -96,7 +70,7 @@ public class SendMessageBot {
         return messageCreate;
     }
 
-    private SendMessage handleDeleteCommand(String answer) {
+    SendMessage handleDeleteCommand(String answer) {
         SendMessage messageDelete = new SendMessage();
         personService.deleteById(Long.valueOf(answer));
         messageDelete.setText("контакт успешно удален");
@@ -104,42 +78,34 @@ public class SendMessageBot {
         return messageDelete;
     }
 
-    private SendMessage handleFindCommand(String answer) {
+    SendMessage handleFindCommand(String answer) {
         SendMessage messageFind = new SendMessage();
         messageFind.setText(personService.findByAll(answer));
         messageFind.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
         return messageFind;
     }
 
-    private SendMessage handleUpdateCommand(String answer) {
+    SendMessage handleUpdateCommand(String answer) {
         SendMessage messageFind = new SendMessage();
         messageFind.setText(personService.findByAll(answer));
         messageFind.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
         return messageFind;
     }
 
-    private SendMessage handleStartCommand(String answer, Long userId) {
-        String userIdInDB = userService.findAll(userId);
-        SendMessage messageStart = new SendMessage();
-        if (userId.toString().equals(userIdInDB)) {
-            messageStart.setText("Введите кодовую фразу для проверки!");
-        } else {
-            messageStart.setText("Добро пожаловать в телефонный справочник ССПК. " +
-                    "Поиск выполняется по Фамилии, по Имени, по отделу. " +
-                    "Для поиска введите Имя или Фамилию или отдел." +
-                    "\n\n" +
-                    "выполните поиск...");
-        }
-        return messageStart;
+    SendMessage handleStartCommand() {
+
+        SendMessage messageStartCommand = new SendMessage();
+        messageStartCommand.setText("Введите кодовую фразу!");
+
+        return messageStartCommand;
     }
 
-    private SendMessage handleUserNotFound(Long userId) {
-        SendMessage messageUserNotFound = new SendMessage();
+    SendMessage handleSaveUserBot(Long userId) {
+        SendMessage messageSaveUserCommand = new SendMessage();
         userService.save(userId);
-        messageUserNotFound.setText("Теперь можно пользоваться!");
-        messageUserNotFound.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
+        messageSaveUserCommand.setText("Теперь можно пользоваться!");
+        messageSaveUserCommand.setReplyMarkup(inlineKeyboardMaker.getKeyBoard());
 
-        return messageUserNotFound;
+        return messageSaveUserCommand;
     }
-
 }

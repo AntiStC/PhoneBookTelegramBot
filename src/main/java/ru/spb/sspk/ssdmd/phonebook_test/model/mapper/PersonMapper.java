@@ -1,8 +1,10 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.mapper;
 
+import org.springframework.stereotype.Component;
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
 
+@Component
 public class PersonMapper {
 
     public static PersonDto toDto(Person person) {
