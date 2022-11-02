@@ -22,7 +22,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     private String botName;
     @Value("${telegram.token}")
     private String botToken;
-    String code = "SSPKforever";
+    String code = "TheProfessionalSoftwareMaintenanceDepartmentInTheBestAndJAVAIsTheBestProgrammingLanguage";
 
     public TelegramBot(PersonService personService, InlineKeyboardMaker inlineKeyboardMaker, UserService userService, SendMessageBot sendMessageBot) {
         this.inlineKeyboardMaker = inlineKeyboardMaker;
