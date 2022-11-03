@@ -87,7 +87,8 @@ public class PersonRepositoryImpl implements PersonRepository {
         List<Person> personList = namedParameterJdbcTemplate.query("select id, first_name, middle_name, last_name, department, phone, mobil_phone " +
                         "from person where first_name = :first_name " +
                         "or last_name = :last_name " +
-                        "or department = :department"
+                        "or department = :department " +
+                        "or phone = :phone"
                 , paramMap, this::mapRowToPerson).stream().collect(Collectors.toList());
 
         return personList;

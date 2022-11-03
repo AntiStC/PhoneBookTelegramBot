@@ -1,8 +1,8 @@
 package ru.spb.sspk.ssdmd.phonebook_test.service.impl;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto;
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person;
 import ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper;
@@ -73,22 +73,27 @@ public class PersonServiceImpl implements PersonService {
 
         List<PersonDto> personList = null;
 
-            String firstName = StringUtils.capitalize(answer.toLowerCase());
-            String lastName = StringUtils.capitalize(answer.toLowerCase());
-            String department = answer.toUpperCase();
+        String firstName = StringUtils.capitalize(answer.toLowerCase());
+        String lastName = StringUtils.capitalize(answer.toLowerCase());
+        String department = answer.toUpperCase();
+        Integer phone = null;
+        if (StringUtils.isNumeric(answer)) {
+            phone = Integer.valueOf(answer);
+        }
 
-            Map<String, Object> paramMap = new HashMap<>(16);
-            paramMap.put("first_name", firstName);
-            paramMap.put("last_name", lastName);
-            paramMap.put("department", department);
+        Map<String, Object> paramMap = new HashMap<>(16);
+        paramMap.put("first_name", firstName);
+        paramMap.put("last_name", lastName);
+        paramMap.put("department", department);
+        paramMap.put("phone", phone);
 
-            personList = personRepository.findByAll(paramMap).stream()
-                    .map(PersonMapper::toDto)
-                    .collect(Collectors.toList());
+        personList = personRepository.findByAll(paramMap).stream()
+                .map(PersonMapper::toDto)
+                .collect(Collectors.toList());
 
-            return personList.toString().replace("[", "")
-                    .replace("]", "")
-                    .replace(",", ",\n\n");
+        return personList.toString().replace("[", "")
+                .replace("]", "")
+                .replace(",", ",\n\n");
     }
 
     @Override
