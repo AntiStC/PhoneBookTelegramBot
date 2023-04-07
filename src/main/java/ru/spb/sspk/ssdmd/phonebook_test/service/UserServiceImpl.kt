@@ -15,7 +15,7 @@ class UserServiceImpl(
 ) : UserService {
 
     override fun create(userId: Long, username: String): String {
-        val userDto = UserDto(userId, username)
+        val userDto = UserDto(userId, username, activityAt = Date.from(Instant.now()))
         val user = User()
         user.userId = userDto.userId
         user.username = userDto.username
@@ -30,7 +30,7 @@ class UserServiceImpl(
     }
 
     override fun checkingForAuthenticationNow(userId: Long): Boolean {
-        return userRepository.findByUserIdAndAuthentication(userId) != null
+        return userRepository.existsByUserIdAndAuthenticationTrue(userId)
     }
 
     override fun checkingForAuthenticationAndAccess(userId: Long, username: String, answer: String?): String {
@@ -59,7 +59,7 @@ class UserServiceImpl(
     }
 
     override fun checkingUserRole(userId: Long): Boolean {
-        TODO("Not yet implemented")
+        return userRepository.existsByUserIdAndRole(userId, "admin")
     }
 
     private fun generatePassword(length: Int): String {
@@ -73,7 +73,7 @@ class UserServiceImpl(
             .joinToString("")
     }
 
-     override fun updateActivityAtToUser(userId: Long) {
+    override fun updateActivityAtToUser(userId: Long) {
         val user = userRepository.findById(userId).orElseThrow { EntityNotFoundException("User not found") }
         user.activityAt = Date.from(Instant.now())
         userRepository.save(user)
@@ -82,5 +82,10 @@ class UserServiceImpl(
     private fun checkingTheCorrectnessOfTheEnteredPassword(userId: Long, password: String): Boolean {
         val user = userRepository.findById(userId).orElseThrow { EntityNotFoundException("User not found") }
         return user.password == password
+    }
+
+    override fun findAllUsers(): String {
+        val users: MutableList<UserDto?> = userMapper.toDtoList(userRepository.findAll())
+        return users.toString()
     }
 }

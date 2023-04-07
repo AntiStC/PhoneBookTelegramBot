@@ -15,7 +15,9 @@ interface UserService {
 
     fun findById(userId: Long): String
 
-    fun checkingUserRole(userId:Long):Boolean
+    fun checkingUserRole(userId: Long): Boolean
 
     fun updateActivityAtToUser(userId: Long)
+
+    fun findAllUsers(): String
 }

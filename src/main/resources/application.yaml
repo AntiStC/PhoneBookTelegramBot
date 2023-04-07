@@ -19,7 +19,6 @@ logging:
   file:
     path: ./logs
 
-
 telegram:
-  name: 
-  token: 
+  name: sspk_ssdmd_test_bot
+  token: 5581826793:AAHgUXlOU2axvMIVz4HyQ8NfHCgx5yoG-z4

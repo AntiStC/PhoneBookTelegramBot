@@ -65,10 +65,11 @@ class TelegramBot(
                     null -> sendMessageBot.handleNotFound()
                     else -> sendMessageBot.handleStandardCommand(userId, answer)
                 }
-//            userService.checkingUserRole(userId) && userService.checkingForAuthenticationNow(userId)->
-//                when(answer){
-//                    "/usersAll"->
-//                }
+
+            answer == "/usersAll" &&
+                    userService.checkingUserRole(userId) &&
+                    userService.checkingForAuthenticationNow(userId) ->
+                sendMessageBot.showAllUsersForAdmin()
 
             else -> sendMessageBot.handleLackOfAccessOrAuthentication(userId, username, answer)
         }

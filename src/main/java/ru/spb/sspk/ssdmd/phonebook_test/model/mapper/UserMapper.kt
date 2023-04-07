@@ -8,13 +8,13 @@ import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User
 class UserMapper {
 
     @Autowired
-    val mapper = ModelMapper()
-
-    fun toEntity(dto: UserDto?): User? {
-        return mapper.map(dto, User::class.java)
-    }
+    lateinit var mapper: ModelMapper
 
     fun toDto(entity: User?): UserDto? {
         return mapper.map(entity, UserDto::class.java)
+    }
+
+    fun toDtoList(entityList: MutableList<User>): MutableList<UserDto?> {
+        return entityList.map { toDto(it) }.toMutableList()
     }
 }

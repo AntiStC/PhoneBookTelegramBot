@@ -62,4 +62,10 @@ class SendMessageBot(
                 "ТИС - отдел тестирования информационных систем;\n"
         return messageInfo
     }
+
+    fun showAllUsersForAdmin(): SendMessage {
+        val messageAllUsers = SendMessage()
+        messageAllUsers.text = userService.findAllUsers()
+        return messageAllUsers
+    }
 }
