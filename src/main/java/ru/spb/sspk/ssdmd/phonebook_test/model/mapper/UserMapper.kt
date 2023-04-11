@@ -2,12 +2,13 @@ package ru.spb.sspk.ssdmd.phonebook_test.model.mapper
 
 import org.modelmapper.ModelMapper
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.UserDto
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User
 
+@Component
 class UserMapper {
 
-    @Autowired
     lateinit var mapper: ModelMapper
 
     fun toDto(entity: User?): UserDto? {

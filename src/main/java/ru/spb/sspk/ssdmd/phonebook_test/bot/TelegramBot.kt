@@ -7,23 +7,27 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
 import org.telegram.telegrambots.meta.api.objects.Update
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException
-import ru.spb.sspk.ssdmd.phonebook_test.config.BotProperties
 import ru.spb.sspk.ssdmd.phonebook_test.service.UserService
 
 @Component
 class TelegramBot(
-    val botProperties: BotProperties,
+//    private val botProperties: AppConfiguration.BotProperties,
     val userService: UserService,
     val sendMessageBot: SendMessageBot,
     val logger: Logger = LoggerFactory.getLogger(TelegramBot::class.java)
-) : TelegramLongPollingBot() {
+) : TelegramLongPollingBot("5581826793:AAENdlxwB5XLCZBKX523s3fKLegM1Dz8DcM") {
+
 
     override fun getBotToken(): String {
-        return botProperties.token
+        return "sspk_ssdmd_test_bot"
     }
 
     override fun getBotUsername(): String {
-        return botProperties.name
+        return "5581826793:AAENdlxwB5XLCZBKX523s3fKLegM1Dz8DcM"
+    }
+
+    override fun clearWebhook() {
+        super.clearWebhook()
     }
 
     override fun onUpdateReceived(update: Update) {
@@ -41,10 +45,10 @@ class TelegramBot(
                 logger.error("", e)
             }
         } else if (update.hasCallbackQuery()) {
-            val queryData = update.callbackQuery.data
+            val queryData: String = update.callbackQuery.data
             val userId: Long = update.callbackQuery.from.id
-            val userName = update.callbackQuery.from.userName
-            val chatId = update.callbackQuery.message.chatId
+            val userName: String = update.callbackQuery.from.userName
+            val chatId: Long = update.callbackQuery.message.chatId
             try {
                 val message: SendMessage = getCommandResponse(queryData, userId, userName)
                 message.setChatId(chatId)

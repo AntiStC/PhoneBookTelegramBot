@@ -1,8 +1,5 @@
 package ru.spb.sspk.ssdmd.phonebook_test.service
 
-import org.springframework.stereotype.Service
-
-@Service
 interface UserService {
 
     fun create(userId: Long, username: String): String

@@ -1,17 +1,28 @@
 package ru.spb.sspk.ssdmd.phonebook_test.service
 
+import org.springframework.stereotype.Service
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto
 import ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper
 import ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository
 import java.util.*
 
+@Service
 class PersonServiceImpl(
     private val personRepository: PersonRepository,
     private val personMapper: PersonMapper
 ) : PersonService {
 
     override fun performingSearchByAllParameters(answer: String): String {
-        TODO("Not yet implemented")
+        var response: String? = null
+        response = response ?: findByFirstname(answer).toString()
+        response = response ?: findByLastname(answer).toString()
+        response = response ?: findByDepartment(answer).toString()
+        response = response ?: findBySector(answer).toString()
+        response = response ?: findByBlock(answer).toString()
+        response = response ?: findByPhone(answer).toString()
+        response = response ?: findByMobilPhone(answer).toString()
+
+        return response ?: "По Вашему запросу ничего не найдено"
     }
 
     private fun findByFirstname(firstname: String): MutableList<PersonDto> {
@@ -42,6 +53,7 @@ class PersonServiceImpl(
 
     private fun findByMobilPhone(mobilPhone: String): PersonDto {
         var mobilPhone = mobilPhone
+
         if (mobilPhone.startsWith("8")) mobilPhone = mobilPhone.removePrefix("8")
         else if (mobilPhone.startsWith("+7")) mobilPhone = mobilPhone.removePrefix("+7")
         else if (mobilPhone.startsWith("7")) mobilPhone = mobilPhone.removePrefix("7")
@@ -58,9 +70,5 @@ class PersonServiceImpl(
 
     private fun findByBlock(block: String): List<PersonDto> {
         return personMapper.toDtoList(personRepository.findByBlock(block.uppercase(Locale.getDefault())))
-    }
-
-    private fun findAll(): MutableList<PersonDto> {
-        return personMapper.toDtoList(personRepository.findAll().toMutableList())
     }
 }

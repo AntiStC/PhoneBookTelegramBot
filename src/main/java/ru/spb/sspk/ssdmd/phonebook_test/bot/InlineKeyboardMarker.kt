@@ -1,8 +1,10 @@
 package ru.spb.sspk.ssdmd.phonebook_test.bot
 
+import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton
 
+@Component
 class InlineKeyboardMarker {
 
     fun getKeyboard(): InlineKeyboardMarkup {

@@ -1,5 +1,6 @@
 package ru.spb.sspk.ssdmd.phonebook_test.service
 
+import org.springframework.stereotype.Service
 import ru.spb.sspk.ssdmd.phonebook_test.exception.EntityNotFoundException
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.UserDto
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.User
@@ -9,6 +10,7 @@ import java.security.SecureRandom
 import java.time.Instant
 import java.util.*
 
+@Service
 class UserServiceImpl(
     private val userRepository: UserRepository,
     private val userMapper: UserMapper
