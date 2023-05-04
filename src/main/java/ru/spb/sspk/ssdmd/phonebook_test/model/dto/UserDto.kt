@@ -1,13 +1,20 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.dto
 
-import java.util.*
-
 data class UserDto(
-    val userId: Long,
-    val username: String,
-    val activityAt: Date
+    var id: Long = 0,
+    var userId: Long = 0,
+    var username: String = "",
+    var password: String = "",
+    var authentication: Boolean = false,
+    var createAt: String = "",
+    var activityAt: String = ""
 ) {
+
     override fun toString(): String {
-        return "UserDto(userId=$userId, username='$username', activityAt=$activityAt)"
+        return "userId=$userId, " +
+                "username=@$username, " +
+                "password=$password, " +
+                "authentication=$authentication, " +
+                "activityAt=$activityAt,  "
     }
 }

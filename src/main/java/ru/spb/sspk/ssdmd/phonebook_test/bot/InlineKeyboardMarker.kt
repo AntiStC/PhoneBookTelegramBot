@@ -23,7 +23,7 @@ class InlineKeyboardMarker {
 
         keyboardMarkup.keyboard = keyBoardButtons
 
-        return getKeyboard()
+        return keyboardMarkup
     }
 }
 

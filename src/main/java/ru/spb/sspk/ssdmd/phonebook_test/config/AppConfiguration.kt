@@ -1,21 +1,19 @@
 package ru.spb.sspk.ssdmd.phonebook_test.config
 
 import org.modelmapper.ModelMapper
-import org.springframework.boot.context.properties.ConfigurationProperties
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.stereotype.Component
+import org.springframework.scheduling.annotation.EnableScheduling
 
 
 @Configuration
-@ConfigurationProperties(prefix = "telegram")
-open class AppConfiguration {
+@EnableScheduling
+@ConditionalOnProperty(name = ["scheduler.enabled"], matchIfMissing = true)
+class AppConfiguration {
 
     @Bean
-    open fun modelMapper(): ModelMapper? {
+    fun modelMapper(): ModelMapper {
         return ModelMapper()
     }
-
-//    @Component
-//    data class BotProperties(val name: String, val token: String)
 }

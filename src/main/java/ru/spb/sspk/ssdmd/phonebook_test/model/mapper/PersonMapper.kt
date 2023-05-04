@@ -1,23 +1,29 @@
 package ru.spb.sspk.ssdmd.phonebook_test.model.mapper
 
 import org.modelmapper.ModelMapper
-import org.springframework.beans.factory.annotation.Autowired
+import org.modelmapper.convention.MatchingStrategies
 import org.springframework.stereotype.Component
-import org.springframework.web.bind.annotation.Mapping
 import ru.spb.sspk.ssdmd.phonebook_test.model.dto.PersonDto
 import ru.spb.sspk.ssdmd.phonebook_test.model.entity.Person
 
 @Component
 class PersonMapper {
+    private val mapper = ModelMapper()
 
-    @Autowired
-    lateinit var mapper: ModelMapper
-
-    fun toDto(entity: Person): PersonDto {
-        return mapper.map(entity, PersonDto::class.java)
+    init {
+        mapper.configuration.matchingStrategy = MatchingStrategies.STRICT
+        mapper.typeMap(Person::class.java, PersonDto::class.java)
     }
 
-    fun toDtoList(entityList: MutableList<Person>): MutableList<PersonDto> {
-        return entityList.map { toDto(it) }.toMutableList()
+    fun toDto(person: Person): PersonDto {
+        return mapper.map(person, PersonDto::class.java)
+    }
+
+    fun toEntity(personDto: PersonDto): Person {
+        return mapper.map(personDto, Person::class.java)
+    }
+
+    fun toDtoList(persons: List<Person>): MutableList<PersonDto> {
+        return persons.map { toDto(it) }.toMutableList()
     }
 }
