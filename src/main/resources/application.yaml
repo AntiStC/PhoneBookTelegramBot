@@ -1,24 +1,25 @@
 server:
-  servlet:
-    context-path: /api
-  port: 8081
-
+  port: 8080
 
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/sspk_ssdmd_pb
+    url: jdbc:postgresql://localhost:5432/
     username: postgres
     password: root
   jpa:
-    properties:
-      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
-      hibernate.globally_quoted_identifiers: true
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      database: postgresql
 
 logging:
   file:
     path: ./logs
 
 telegram:
-  name: 
-  token: 
+  name:
+  token:
+
+

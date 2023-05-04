@@ -1,0 +1,1210 @@
+2023-04-11 10:14:16.055  INFO 22473 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 22473 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 10:14:16.058  INFO 22473 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 10:14:16.296  INFO 22473 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 10:14:16.320  INFO 22473 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 10:14:16.531  INFO 22473 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 10:14:16.535  INFO 22473 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 10:14:16.535  INFO 22473 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 10:14:16.600  INFO 22473 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 10:14:16.600  INFO 22473 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 519 ms
+2023-04-11 10:14:16.642  INFO 22473 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:14:16.644  WARN 22473 --- [main] org.postgresql.Driver                    : JDBC URL contains too many / characters: jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+2023-04-11 10:14:16.644  INFO 22473 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:14:16.645  WARN 22473 --- [main] org.postgresql.Driver                    : JDBC URL contains too many / characters: jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+2023-04-11 10:14:16.669  INFO 22473 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:14:16.669  WARN 22473 --- [main] org.postgresql.Driver                    : JDBC URL contains too many / characters: jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+2023-04-11 10:14:16.669  WARN 22473 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]: Factory method 'entityManagerFactory' threw exception; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+2023-04-11 10:14:16.670  INFO 22473 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 10:14:16.674  INFO 22473 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 10:14:16.682 ERROR 22473 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]: Factory method 'entityManagerFactory' threw exception; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]: Factory method 'entityManagerFactory' threw exception; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 19 common frames omitted
+Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://localhost:5432/sspk_ssdmd_pb/test
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:331) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.22.jar:5.3.22]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.22.jar:5.3.22]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.22.jar:5.3.22]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-5.3.22.jar:5.3.22]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:162) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:143) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:103) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 20 common frames omitted
+
+2023-04-11 10:27:10.984  INFO 22696 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 22696 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 10:27:10.985  INFO 22696 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 10:27:11.245  INFO 22696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 10:27:11.274  INFO 22696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2023-04-11 10:27:11.478  INFO 22696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 10:27:11.482  INFO 22696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 10:27:11.482  INFO 22696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 10:27:11.533  INFO 22696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 10:27:11.533  INFO 22696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 526 ms
+2023-04-11 10:27:11.570  INFO 22696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:27:11.662  INFO 22696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 10:27:11.706  INFO 22696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 10:27:11.729  INFO 22696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 10:27:11.785  INFO 22696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 10:27:11.824  INFO 22696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 10:27:11.941  INFO 22696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 10:27:11.944  INFO 22696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:27:11.958  WARN 22696 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/TelegramBot.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot]: No default constructor found; nested exception is java.lang.NoSuchMethodException: ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.<init>()
+2023-04-11 10:27:11.958  INFO 22696 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:27:11.959  INFO 22696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 10:27:11.960  INFO 22696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 10:27:11.960  INFO 22696 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 10:27:11.965  INFO 22696 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 10:27:11.973 ERROR 22696 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/TelegramBot.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot]: No default constructor found; nested exception is java.lang.NoSuchMethodException: ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.<init>()
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot]: No default constructor found; nested exception is java.lang.NoSuchMethodException: ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.<init>()
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:83) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 17 common frames omitted
+Caused by: java.lang.NoSuchMethodException: ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3641) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:78) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 18 common frames omitted
+
+2023-04-11 10:28:31.022  INFO 22741 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 22741 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 10:28:31.023  INFO 22741 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 10:28:31.263  INFO 22741 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 10:28:31.285  INFO 22741 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 10:28:31.477  INFO 22741 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 10:28:31.481  INFO 22741 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 10:28:31.481  INFO 22741 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 10:28:31.531  INFO 22741 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 10:28:31.531  INFO 22741 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 485 ms
+2023-04-11 10:28:31.566  INFO 22741 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:28:31.611  INFO 22741 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 10:28:31.652  INFO 22741 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 10:28:31.674  INFO 22741 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 10:28:31.741  INFO 22741 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 10:28:31.787  INFO 22741 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 10:28:31.892  INFO 22741 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 10:28:31.895  INFO 22741 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:28:31.899  WARN 22741 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.spb.sspk.ssdmd.phonebook_test.service.PersonService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-11 10:28:31.899  INFO 22741 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:28:31.900  INFO 22741 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 10:28:31.901  INFO 22741 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 10:28:31.902  INFO 22741 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 10:28:31.906  INFO 22741 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 10:28:31.914 ERROR 22741 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.spb.sspk.ssdmd.phonebook_test.bot.SendMessageBot required a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.service.PersonService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.service.PersonService' in your configuration.
+
+2023-04-11 10:52:45.085  INFO 23628 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 23628 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 10:52:45.086  INFO 23628 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 10:52:45.347  INFO 23628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 10:52:45.370  INFO 23628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 10:52:45.568  INFO 23628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 10:52:45.571  INFO 23628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 10:52:45.572  INFO 23628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 10:52:45.627  INFO 23628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 10:52:45.627  INFO 23628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 520 ms
+2023-04-11 10:52:45.661  INFO 23628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 10:52:45.716  INFO 23628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 10:52:45.757  INFO 23628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 10:52:45.780  INFO 23628 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 10:52:45.844  INFO 23628 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 10:52:45.884  INFO 23628 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 10:52:46.011  INFO 23628 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 10:52:46.014  INFO 23628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:52:46.078  WARN 23628 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personRepository' defined in ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+2023-04-11 10:52:46.079  INFO 23628 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 10:52:46.079  INFO 23628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 10:52:46.081  INFO 23628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 10:52:46.081  INFO 23628 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 10:52:46.087  INFO 23628 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 10:52:46.095 ERROR 23628 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personRepository' defined in ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personRepository' defined in ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personRepository' defined in ru.spb.sspk.ssdmd.phonebook_test.repository.PersonRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 33 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+	at org.springframework.data.mapping.model.PreferredConstructorDiscoverer$Discoverers$2.lambda$discover$3(PreferredConstructorDiscoverer.java:165) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springframework.data.mapping.model.PreferredConstructorDiscoverer$Discoverers$2.discover(PreferredConstructorDiscoverer.java:162) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.model.PreferredConstructorDiscoverer.discover(PreferredConstructorDiscoverer.java:81) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.model.InstanceCreatorMetadataDiscoverer.discover(InstanceCreatorMetadataDiscoverer.java:83) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.model.BasicPersistentEntity.<init>(BasicPersistentEntity.java:113) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.jpa.mapping.JpaPersistentEntityImpl.<init>(JpaPersistentEntityImpl.java:59) ~[spring-data-jpa-2.7.2.jar:2.7.2]
+	at org.springframework.data.jpa.mapping.JpaMetamodelMappingContext.createPersistentEntity(JpaMetamodelMappingContext.java:71) ~[spring-data-jpa-2.7.2.jar:2.7.2]
+	at org.springframework.data.jpa.mapping.JpaMetamodelMappingContext.createPersistentEntity(JpaMetamodelMappingContext.java:44) ~[spring-data-jpa-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.context.AbstractMappingContext.doAddPersistentEntity(AbstractMappingContext.java:430) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.context.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:406) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:291) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:209) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.mapping.context.AbstractMappingContext.getPersistentEntity(AbstractMappingContext.java:92) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$6(RepositoryFactoryBeanSupport.java:326) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:326) ~[spring-data-commons-2.7.2.jar:2.7.2]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.2.jar:2.7.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: kotlin.reflect.full.KClasses
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 64 common frames omitted
+
+2023-04-11 11:03:19.775  INFO 23921 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 23921 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:03:19.776  INFO 23921 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:03:20.035  INFO 23921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:03:20.063  INFO 23921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:03:20.262  INFO 23921 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:03:20.265  INFO 23921 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:03:20.265  INFO 23921 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:03:20.311  INFO 23921 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:03:20.311  INFO 23921 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 517 ms
+2023-04-11 11:03:20.345  INFO 23921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:03:20.404  INFO 23921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:03:20.444  INFO 23921 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:03:20.465  INFO 23921 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:03:20.530  INFO 23921 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:03:20.573  INFO 23921 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:03:20.700  INFO 23921 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:03:20.703  INFO 23921 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:03:21.090  WARN 23921 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-11 11:03:21.090  INFO 23921 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:03:21.091  INFO 23921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:03:21.092  INFO 23921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:03:21.093  INFO 23921 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:03:21.098  INFO 23921 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:03:21.106 ERROR 23921 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in ru.spb.sspk.ssdmd.phonebook_test.service.PersonServiceImpl required a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper' in your configuration.
+
+2023-04-11 11:04:12.648  INFO 23955 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 23955 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:04:12.649  INFO 23955 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:04:12.948  INFO 23955 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:04:12.972  INFO 23955 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:04:13.173  INFO 23955 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:04:13.177  INFO 23955 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:04:13.177  INFO 23955 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:04:13.224  INFO 23955 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:04:13.224  INFO 23955 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 554 ms
+2023-04-11 11:04:13.259  INFO 23955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:04:13.296  INFO 23955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:04:13.337  INFO 23955 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:04:13.358  INFO 23955 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:04:13.425  INFO 23955 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:04:13.474  INFO 23955 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:04:13.584  INFO 23955 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:04:13.587  INFO 23955 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:04:13.932  WARN 23955 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personMapper': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-04-11 11:04:13.933  INFO 23955 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:04:13.933  INFO 23955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:04:13.934  INFO 23955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:04:13.935  INFO 23955 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:04:13.940  INFO 23955 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:04:13.948 ERROR 23955 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper required a bean of type 'org.modelmapper.ModelMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.modelmapper.ModelMapper' in your configuration.
+
+2023-04-11 11:05:16.709  INFO 23979 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 23979 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:05:16.711  INFO 23979 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:05:16.956  INFO 23979 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:05:16.977  INFO 23979 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:05:17.169  INFO 23979 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:05:17.173  INFO 23979 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:05:17.173  INFO 23979 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:05:17.208  INFO 23979 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:05:17.208  INFO 23979 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 475 ms
+2023-04-11 11:05:17.254  INFO 23979 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:05:17.304  INFO 23979 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:05:17.345  INFO 23979 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:05:17.366  INFO 23979 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:05:17.431  INFO 23979 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:05:17.473  INFO 23979 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:05:17.583  INFO 23979 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:05:17.586  INFO 23979 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:05:17.937  WARN 23979 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sendMessageBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/SendMessageBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/service/PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personMapper': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-04-11 11:05:17.937  INFO 23979 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:05:17.937  INFO 23979 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:05:17.938  INFO 23979 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:05:17.939  INFO 23979 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:05:17.943  INFO 23979 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:05:17.953 ERROR 23979 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in ru.spb.sspk.ssdmd.phonebook_test.model.mapper.PersonMapper required a bean of type 'org.modelmapper.ModelMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.modelmapper.ModelMapper' in your configuration.
+
+2023-04-11 11:08:36.809  INFO 24184 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24184 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:08:36.810  INFO 24184 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:08:37.223  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:08:37.242  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:08:37.462  INFO 24184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:08:37.466  INFO 24184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:08:37.466  INFO 24184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:08:37.544  INFO 24184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:08:37.544  INFO 24184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+2023-04-11 11:08:37.604  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:08:37.664  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:08:37.712  INFO 24184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:08:37.735  INFO 24184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:08:37.794  INFO 24184 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:08:37.833  INFO 24184 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:08:37.954  INFO 24184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:08:37.957  INFO 24184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:08:38.213  WARN 24184 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'telegramBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/TelegramBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'botProperties' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/config/BotProperties.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-11 11:08:38.214  INFO 24184 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:08:38.214  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:08:38.215  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:08:38.215  INFO 24184 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:08:38.223  INFO 24184 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:08:38.231 ERROR 24184 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.spb.sspk.ssdmd.phonebook_test.config.BotProperties required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+2023-04-11 11:13:33.274  INFO 24402 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24402 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:13:33.275  INFO 24402 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:13:33.707  INFO 24402 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:13:33.727  INFO 24402 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:13:33.966  INFO 24402 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:13:33.970  INFO 24402 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:13:33.970  INFO 24402 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:13:34.009  INFO 24402 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:13:34.009  INFO 24402 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 717 ms
+2023-04-11 11:13:34.045  INFO 24402 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:13:34.110  INFO 24402 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:13:34.153  INFO 24402 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:13:34.174  INFO 24402 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:13:34.241  INFO 24402 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:13:34.280  INFO 24402 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:13:34.397  INFO 24402 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:13:34.400  INFO 24402 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:13:34.645  WARN 24402 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'telegramBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/TelegramBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ru.spb.sspk.ssdmd.phonebook_test.config.AppConfiguration$BotProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-11 11:13:34.645  INFO 24402 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:13:34.646  INFO 24402 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:13:34.647  INFO 24402 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:13:34.648  INFO 24402 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:13:34.652  INFO 24402 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:13:34.660 ERROR 24402 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot required a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.config.AppConfiguration$BotProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'ru.spb.sspk.ssdmd.phonebook_test.config.AppConfiguration$BotProperties' in your configuration.
+
+2023-04-11 11:14:15.876  INFO 24432 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24432 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:14:15.877  INFO 24432 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:14:16.290  INFO 24432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:14:16.307  INFO 24432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:14:16.509  INFO 24432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:14:16.513  INFO 24432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:14:16.513  INFO 24432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:14:16.548  INFO 24432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:14:16.548  INFO 24432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 653 ms
+2023-04-11 11:14:16.586  INFO 24432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:14:16.634  INFO 24432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:14:16.675  INFO 24432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:14:16.696  INFO 24432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:14:16.755  INFO 24432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:14:16.798  INFO 24432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:14:16.906  INFO 24432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:14:16.909  INFO 24432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:14:17.158  WARN 24432 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'telegramBot' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/bot/TelegramBot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfiguration.BotProperties' defined in file [/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes/ru/spb/sspk/ssdmd/phonebook_test/config/AppConfiguration$BotProperties.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-11 11:14:17.158  INFO 24432 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:14:17.158  INFO 24432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:14:17.162  INFO 24432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:14:17.163  INFO 24432 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:14:17.168  INFO 24432 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:14:17.176 ERROR 24432 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in ru.spb.sspk.ssdmd.phonebook_test.config.AppConfiguration$BotProperties required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+2023-04-11 11:19:28.564  INFO 24598 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24598 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:19:28.566  INFO 24598 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:19:29.253  INFO 24598 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:19:29.272  INFO 24598 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:19:29.482  INFO 24598 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:19:29.486  INFO 24598 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:19:29.486  INFO 24598 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:19:29.525  INFO 24598 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:19:29.525  INFO 24598 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 926 ms
+2023-04-11 11:19:29.567  INFO 24598 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:19:29.614  INFO 24598 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:19:29.657  INFO 24598 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:19:29.678  INFO 24598 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:19:29.751  INFO 24598 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:19:29.792  INFO 24598 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:19:29.907  INFO 24598 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:19:29.910  INFO 24598 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:19:30.240  WARN 24598 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 11:19:30.356  WARN 24598 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 456b59a8-cf8f-4557-8d38-6025e897f99a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 11:19:30.403  INFO 24598 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@fc6cac6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@538d2308, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b84d03d, org.springframework.security.web.header.HeaderWriterFilter@258ac1e6, org.springframework.security.web.csrf.CsrfFilter@62ff3028, org.springframework.security.web.authentication.logout.LogoutFilter@189f3ccd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55589ef5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@365a4b9b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3d0697da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@352d3749, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e1d813a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1964ef9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b99f2ed, org.springframework.security.web.session.SessionManagementFilter@3d0ce151, org.springframework.security.web.access.ExceptionTranslationFilter@756030e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2af1bf5a]
+2023-04-11 11:19:30.872  WARN 24598 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 11:19:30.873  INFO 24598 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:19:30.874  INFO 24598 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:19:30.876  INFO 24598 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:19:30.876  INFO 24598 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:19:30.883  INFO 24598 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:19:30.892 ERROR 24598 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:112) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:24) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:53) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:33) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1045) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:107) ~[telegrambots-6.1.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 11:22:41.765  INFO 24656 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24656 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:22:41.766  INFO 24656 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:22:42.178  INFO 24656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:22:42.197  INFO 24656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:22:42.408  INFO 24656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-11 11:22:42.412  INFO 24656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:22:42.412  INFO 24656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:22:42.454  INFO 24656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:22:42.454  INFO 24656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2023-04-11 11:22:42.490  INFO 24656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:22:42.548  INFO 24656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:22:42.589  INFO 24656 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:22:42.609  INFO 24656 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:22:42.673  INFO 24656 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:22:42.714  INFO 24656 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:22:42.829  INFO 24656 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:22:42.832  INFO 24656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:22:43.163  WARN 24656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 11:22:43.274  WARN 24656 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e5013582-ff3e-4356-8121-f81b5a6cf110
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 11:22:43.322  INFO 24656 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45dfb6a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@202ba60a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1aba8978, org.springframework.security.web.header.HeaderWriterFilter@5ee76cf2, org.springframework.security.web.csrf.CsrfFilter@7be85f15, org.springframework.security.web.authentication.logout.LogoutFilter@434a2a10, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34893693, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1f3f0d25, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@12ebcdf6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a5df98c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@487ee2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@682482ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30dd23e2, org.springframework.security.web.session.SessionManagementFilter@4fce655d, org.springframework.security.web.access.ExceptionTranslationFilter@4a5c6b30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d827673]
+2023-04-11 11:22:44.738  WARN 24656 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 11:22:44.740  INFO 24656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:22:44.741  INFO 24656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:22:44.742  INFO 24656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:22:44.742  INFO 24656 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:22:44.749  INFO 24656 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:22:44.757 ERROR 24656 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:112) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:24) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:53) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:33) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1045) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:107) ~[telegrambots-6.1.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 11:42:19.558  INFO 24830 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 24830 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 11:42:19.560  INFO 24830 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 11:42:20.000  INFO 24830 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 11:42:20.019  INFO 24830 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 11:42:20.229  INFO 24830 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-11 11:42:20.233  INFO 24830 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 11:42:20.233  INFO 24830 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 11:42:20.272  INFO 24830 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 11:42:20.273  INFO 24830 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 695 ms
+2023-04-11 11:42:20.307  INFO 24830 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 11:42:20.358  INFO 24830 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 11:42:20.400  INFO 24830 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 11:42:20.422  INFO 24830 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 11:42:20.498  INFO 24830 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 11:42:20.537  INFO 24830 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 11:42:20.652  INFO 24830 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 11:42:20.655  INFO 24830 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:42:20.981  WARN 24830 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 11:42:21.091  WARN 24830 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6161bb9d-eaa0-40ab-b10d-83e5e6638be5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 11:42:21.139  INFO 24830 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a5df98c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f1dadf4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fce655d, org.springframework.security.web.header.HeaderWriterFilter@1c149539, org.springframework.security.web.csrf.CsrfFilter@2162598, org.springframework.security.web.authentication.logout.LogoutFilter@732bb49d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7daf167, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@175745fc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@d15f031, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@43d2c8e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68908be7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1aba8978, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45dfb6a4, org.springframework.security.web.session.SessionManagementFilter@49616310, org.springframework.security.web.access.ExceptionTranslationFilter@27c49f54, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19b33b0d]
+2023-04-11 11:42:23.117  WARN 24830 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 11:42:23.119  INFO 24830 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 11:42:23.120  INFO 24830 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 11:42:23.122  INFO 24830 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 11:42:23.123  INFO 24830 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 11:42:23.130  INFO 24830 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 11:42:23.140 ERROR 24830 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:12) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:112) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:24) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.1.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:53) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:33) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1045) ~[telegrambots-6.1.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.1.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:107) ~[telegrambots-6.1.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 12:02:54.911  INFO 25354 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 25354 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 12:02:54.912  INFO 25354 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 12:02:55.317  INFO 25354 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 12:02:55.335  INFO 25354 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2023-04-11 12:02:55.549  INFO 25354 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-11 12:02:55.553  INFO 25354 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 12:02:55.554  INFO 25354 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 12:02:55.595  INFO 25354 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 12:02:55.595  INFO 25354 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2023-04-11 12:02:55.629  INFO 25354 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 12:02:55.678  INFO 25354 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 12:02:55.719  INFO 25354 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 12:02:55.740  INFO 25354 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 12:02:55.802  INFO 25354 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 12:02:55.843  INFO 25354 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 12:02:55.962  INFO 25354 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 12:02:55.965  INFO 25354 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:02:56.292  WARN 25354 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 12:02:56.408  WARN 25354 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cc39a394-7e33-4133-a795-bb1a95fd48df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 12:02:56.455  INFO 25354 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d77d9c6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c5b4b91, org.springframework.security.web.context.SecurityContextPersistenceFilter@6debf1b8, org.springframework.security.web.header.HeaderWriterFilter@5fb0a09e, org.springframework.security.web.csrf.CsrfFilter@682482ee, org.springframework.security.web.authentication.logout.LogoutFilter@240e61, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a5df98c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@623a891d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@51eeae0a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@603a34e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fe9fb65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5de14222, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76c2d002, org.springframework.security.web.session.SessionManagementFilter@684eb4a0, org.springframework.security.web.access.ExceptionTranslationFilter@62ff3028, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58fadccb]
+2023-04-11 12:02:58.440  WARN 25354 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 12:02:58.442  INFO 25354 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:02:58.442  INFO 25354 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 12:02:58.444  INFO 25354 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 12:02:58.445  INFO 25354 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 12:02:58.452  INFO 25354 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 12:02:58.462 ERROR 25354 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 12:06:46.175  INFO 25557 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 25557 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 12:06:46.176  INFO 25557 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 12:06:46.615  INFO 25557 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 12:06:46.637  INFO 25557 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2023-04-11 12:06:46.889  INFO 25557 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-11 12:06:46.893  INFO 25557 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 12:06:46.893  INFO 25557 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 12:06:46.932  INFO 25557 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 12:06:46.932  INFO 25557 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 733 ms
+2023-04-11 12:06:46.967  INFO 25557 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 12:06:47.015  INFO 25557 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 12:06:47.060  INFO 25557 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 12:06:47.081  INFO 25557 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 12:06:47.143  INFO 25557 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 12:06:47.185  INFO 25557 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 12:06:47.301  INFO 25557 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 12:06:47.303  INFO 25557 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:06:47.641  WARN 25557 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 12:06:47.757  WARN 25557 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f03f2671-845d-4df3-95f6-770045c63a51
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 12:06:47.803  INFO 25557 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30dd23e2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@88fc9cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@62ff3028, org.springframework.security.web.header.HeaderWriterFilter@55bafbc1, org.springframework.security.web.csrf.CsrfFilter@6662974a, org.springframework.security.web.authentication.logout.LogoutFilter@1e1d813a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@456c53a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@701da311, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@75693526, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45dfb6a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fb0a09e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732bb49d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39a1c200, org.springframework.security.web.session.SessionManagementFilter@26d02dc6, org.springframework.security.web.access.ExceptionTranslationFilter@32029cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6df4d8f1]
+2023-04-11 12:06:49.088  WARN 25557 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 12:06:49.090  INFO 25557 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:06:49.091  INFO 25557 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 12:06:49.092  INFO 25557 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 12:06:49.093  INFO 25557 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 12:06:49.100  INFO 25557 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 12:06:49.109 ERROR 25557 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 12:20:05.404  INFO 26019 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 26019 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 12:20:05.405  INFO 26019 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 12:20:05.878  INFO 26019 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 12:20:05.898  INFO 26019 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2023-04-11 12:20:06.106  INFO 26019 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-11 12:20:06.110  INFO 26019 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 12:20:06.110  INFO 26019 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 12:20:06.148  INFO 26019 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 12:20:06.148  INFO 26019 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
+2023-04-11 12:20:06.189  INFO 26019 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 12:20:06.236  INFO 26019 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 12:20:06.278  INFO 26019 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 12:20:06.299  INFO 26019 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 12:20:06.363  INFO 26019 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 12:20:06.403  INFO 26019 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 12:20:06.528  INFO 26019 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 12:20:06.531  INFO 26019 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:20:06.871  WARN 26019 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 12:20:06.985  WARN 26019 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e0f78758-97df-4b0c-964a-13f69631e814
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 12:20:07.030  INFO 26019 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30dd23e2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@88fc9cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@62ff3028, org.springframework.security.web.header.HeaderWriterFilter@55bafbc1, org.springframework.security.web.csrf.CsrfFilter@6662974a, org.springframework.security.web.authentication.logout.LogoutFilter@1e1d813a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@456c53a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@701da311, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@75693526, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45dfb6a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fb0a09e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732bb49d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39a1c200, org.springframework.security.web.session.SessionManagementFilter@26d02dc6, org.springframework.security.web.access.ExceptionTranslationFilter@32029cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6df4d8f1]
+2023-04-11 12:20:07.702  WARN 26019 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 12:20:07.703  INFO 26019 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:20:07.704  INFO 26019 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 12:20:07.705  INFO 26019 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 12:20:07.706  INFO 26019 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 12:20:07.711  INFO 26019 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 12:20:07.720 ERROR 26019 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 21 common frames omitted
+
+2023-04-11 12:20:39.736  INFO 26045 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.2 on MacBook-Air-Vitalij.local with PID 26045 (/Users/vitalijlebed/IdeaProjects/PhoneBook_test/target/classes started by vitalijlebed in /Users/vitalijlebed/IdeaProjects/PhoneBook_test)
+2023-04-11 12:20:39.737  INFO 26045 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 12:20:40.173  INFO 26045 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 12:20:40.190  INFO 26045 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2023-04-11 12:20:40.396  INFO 26045 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-11 12:20:40.401  INFO 26045 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 12:20:40.401  INFO 26045 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 12:20:40.438  INFO 26045 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 12:20:40.438  INFO 26045 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2023-04-11 12:20:40.479  INFO 26045 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 12:20:40.516  INFO 26045 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 12:20:40.558  INFO 26045 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 12:20:40.580  INFO 26045 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 12:20:40.640  INFO 26045 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 12:20:40.680  INFO 26045 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 12:20:40.787  INFO 26045 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 12:20:40.790  INFO 26045 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:20:41.115  WARN 26045 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 12:20:41.225  WARN 26045 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 912704df-a3e5-4159-8238-9eb4c3471c97
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 12:20:41.274  INFO 26045 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76c2d002, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55589ef5, org.springframework.security.web.context.SecurityContextPersistenceFilter@32029cd, org.springframework.security.web.header.HeaderWriterFilter@1f3f0d25, org.springframework.security.web.csrf.CsrfFilter@5b01b3f8, org.springframework.security.web.authentication.logout.LogoutFilter@258ac1e6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45dfb6a4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@45e68fac, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23a9400c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d77d9c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55bafbc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24bc06dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@793248d, org.springframework.security.web.session.SessionManagementFilter@4ef0bc5b, org.springframework.security.web.access.ExceptionTranslationFilter@2c1a0f82, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8bb5c2a]
+2023-04-11 12:20:42.174  WARN 26045 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 12:20:42.176  INFO 26045 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 12:20:42.176  INFO 26045 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 12:20:42.178  INFO 26045 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 12:20:42.178  INFO 26045 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 12:20:42.184  INFO 26045 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 12:20:42.193 ERROR 26045 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.clearWebhook(TelegramBot.kt:30) ~[classes/:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 22 common frames omitted
+
+2023-04-11 14:30:29.877  INFO 24708 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.1 on lebed-v with PID 24708 (C:\Users\v.lebed\IdeaProjects\PhoneBook_test\target\classes started by v.lebed in C:\Users\v.lebed\IdeaProjects\PhoneBook_test)
+2023-04-11 14:30:29.879  INFO 24708 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 14:30:30.252  WARN 24708 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Configuration class 'PhoneBookTestApplication' may not be final. Remove the final modifier to continue.
+Offending resource: ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication
+2023-04-11 14:30:30.258  INFO 24708 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 14:30:30.275 ERROR 24708 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Configuration class 'PhoneBookTestApplication' may not be final. Remove the final modifier to continue.
+Offending resource: ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:72) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClass.validate(ConfigurationClass.java:217) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassParser.validate(ConfigurationClassParser.java:216) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:332) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.kt:10) ~[classes/:na]
+
+2023-04-11 14:31:01.124  INFO 11856 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.1 on lebed-v with PID 11856 (C:\Users\v.lebed\IdeaProjects\PhoneBook_test\target\classes started by v.lebed in C:\Users\v.lebed\IdeaProjects\PhoneBook_test)
+2023-04-11 14:31:01.127  INFO 11856 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 14:31:01.862  INFO 11856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 14:31:01.907  INFO 11856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2023-04-11 14:31:02.288  INFO 11856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-11 14:31:02.295  INFO 11856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 14:31:02.295  INFO 11856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 14:31:02.379  INFO 11856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 14:31:02.380  INFO 11856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2023-04-11 14:31:02.436  INFO 11856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 14:31:02.547  INFO 11856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 14:31:02.631  INFO 11856 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 14:31:02.679  INFO 11856 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 14:31:02.786  INFO 11856 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 14:31:02.866  INFO 11856 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 14:31:03.103  INFO 11856 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 14:31:03.108  INFO 11856 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 14:31:03.654  WARN 11856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 14:31:03.846  WARN 11856 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 693ff738-3321-424b-9d2c-2dd81473df5f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 14:31:03.917  INFO 11856 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18ab513d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e8a678a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a6409ec, org.springframework.security.web.header.HeaderWriterFilter@5f596a1a, org.springframework.security.web.csrf.CsrfFilter@d863bb, org.springframework.security.web.authentication.logout.LogoutFilter@5a20f793, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@429dde4d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1659d7d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6fe91918, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2389f546, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32b8992e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ef7fb04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d3bde85, org.springframework.security.web.session.SessionManagementFilter@13edc1bc, org.springframework.security.web.access.ExceptionTranslationFilter@85eba52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4afdb05e]
+2023-04-11 14:31:04.537  WARN 11856 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 14:31:04.540  INFO 11856 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 14:31:04.542  INFO 11856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 14:31:04.545  INFO 11856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 14:31:04.546  INFO 11856 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 14:31:04.555  INFO 11856 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 14:31:04.570 ERROR 11856 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at ru.spb.sspk.ssdmd.phonebook_test.bot.TelegramBot.clearWebhook(TelegramBot.kt:30) ~[classes/:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 22 common frames omitted
+
+2023-04-11 14:31:28.599  INFO 16936 --- [main] r.s.s.s.p.PhoneBookTestApplication       : Starting PhoneBookTestApplication using Java 19.0.1 on lebed-v with PID 16936 (C:\Users\v.lebed\IdeaProjects\PhoneBook_test\target\classes started by v.lebed in C:\Users\v.lebed\IdeaProjects\PhoneBook_test)
+2023-04-11 14:31:28.601  INFO 16936 --- [main] r.s.s.s.p.PhoneBookTestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-11 14:31:29.361  INFO 16936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 14:31:29.397  INFO 16936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2023-04-11 14:31:29.701  INFO 16936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-11 14:31:29.707  INFO 16936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-11 14:31:29.707  INFO 16936 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-04-11 14:31:29.784  INFO 16936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2023-04-11 14:31:29.785  INFO 16936 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1147 ms
+2023-04-11 14:31:29.834  INFO 16936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 14:31:29.923  INFO 16936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 14:31:29.990  INFO 16936 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 14:31:30.019  INFO 16936 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-11 14:31:30.097  INFO 16936 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-11 14:31:30.166  INFO 16936 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-11 14:31:30.368  INFO 16936 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 14:31:30.375  INFO 16936 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 14:31:30.866  WARN 16936 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 14:31:31.036  WARN 16936 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5a421856-11d6-42e7-9c15-cae52e7252d5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-11 14:31:31.091  INFO 16936 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35a2ea5a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18ab513d, org.springframework.security.web.context.SecurityContextPersistenceFilter@63fde7ca, org.springframework.security.web.header.HeaderWriterFilter@22a8c837, org.springframework.security.web.csrf.CsrfFilter@397bd46b, org.springframework.security.web.authentication.logout.LogoutFilter@2926f7bd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4d529bc0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1e37cb10, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e8a678a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@630bd5e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4779df3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32b8992e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fe91918, org.springframework.security.web.session.SessionManagementFilter@62977afb, org.springframework.security.web.access.ExceptionTranslationFilter@291522f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65fe1f47]
+2023-04-11 14:31:31.532  WARN 16936 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+2023-04-11 14:31:31.534  INFO 16936 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 14:31:31.535  INFO 16936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 14:31:31.538  INFO 16936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 14:31:31.540  INFO 16936 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-11 14:31:31.548  INFO 16936 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 14:31:31.562 ERROR 16936 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBotInitializer' defined in class path resource [org/telegram/telegrambots/starter/TelegramBotStarterConfiguration.class]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Error removing old webhook
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.spb.sspk.ssdmd.phonebook_test.PhoneBookTestApplication.main(PhoneBookTestApplication.java:11) ~[classes/:na]
+Caused by: java.lang.RuntimeException: Error removing old webhook
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:51) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.starter.TelegramBotInitializer.afterPropertiesSet(TelegramBotInitializer.java:44) ~[telegrambots-spring-boot-starter-6.5.0.jar:na]
+	... 18 common frames omitted
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1096) ~[telegrambots-6.5.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.5.0.jar:na]
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108) ~[telegrambots-6.5.0.jar:na]
+	... 21 common frames omitted
+

@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.spb.sspk.ssdmd</groupId>
     <artifactId>PhoneBook_test</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>2.0</version>
     <name>PhoneBook</name>
     <description>PhoneBook</description>
     <developers>
@@ -79,19 +79,19 @@
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots-spring-boot-starter</artifactId>
-            <version>6.1.0</version>
+            <version>6.5.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
-            <version>6.1.0</version>
+            <version>6.5.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambotsextensions</artifactId>
-            <version>6.1.0</version>
+            <version>6.5.0</version>
         </dependency>
 
         <dependency>
@@ -103,6 +103,11 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
